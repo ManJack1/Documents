@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Marking annotation targets within your equation}{2}{section.1}%
+\contentsline {section}{\numberline {2}Simple annotations}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Annotation options}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Double annotations}{3}{section.3}%
+\contentsline {section}{\numberline {4}Package options}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Size of highlight: shrink to content or always full height}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Amount of shading of mark highlight}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Default formatting of annotation labels}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Customize style}{5}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Recommendations, tips \& tricks}{6}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Use \texttt {\textbackslash {}colorlet} for consistent, easily changeable colors}{6}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Relations such as ``$=$''}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Extra spacing between \texttt {\textbackslash {}tikzmarknode} and arrow}{6}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Known issues}{6}{section.6}%
+\contentsline {section}{\numberline {7}Backwards-incompatible changes}{6}{section.7}%

@@ -1,0 +1,59 @@
+\documentclass[12pt, a4paper,oneside, UTF8]{ctexbook}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}   % 数学公式
+\usepackage{amsthm}    % 定理环境
+\usepackage{amssymb}   % 更多公式符号
+\usepackage{graphicx}  % 插图
+\usepackage[colorlinks,linkcolor=black]{hyperref} % 修改超链接颜色
+\usepackage{mathrsfs}  % 数学字体
+\usepackage{enumitem}  % 列表
+\usepackage{xcolor}    % 颜色
+\usepackage{geometry}  % 页面调整
+
+\graphicspath{ {flg/},{../flg/} }            % 配置图形文件检索目录
+
+% 定理环境
+\theoremstyle{definition}                    % 设置环境样式
+\newtheorem{defn}{\indent 定义}[section]      
+
+\newtheorem{lemma}{\indent 引理}[section]     % 引理 定理 推论 准则 共用一个编号计数
+\newtheorem{thm}[lemma]{\indent 定理}
+\newtheorem{corollary}[lemma]{\indent 推论}
+\newtheorem{criterion}[lemma]{\indent 准则}
+
+\newtheorem{proposition}{\indent 命题}[section]
+% \newtheorem{example}{\indent 例}[section]
+\newtheorem{example}{\indent \color{SeaGreen}{例}}[section]     % 绿色的 例，不需要使用上面注释的
+\newtheorem*{rmk}{\indent 注}
+
+% 两种方式定义中文的 证明 和 解 的环境，
+
+% 缺点：\qedhere 命令将会失效【技术有限，暂时无法解决】
+%\renewenvironment{proof}{\par\textbf{证明.}\;}{\qed\par}
+%\newenvironment{solution}{\par{\textbf{解.}}\;}{\qed\par}
+
+% 缺点：\bf 是过时命令，可以用 textb f等替代，但编译会有关于字体的警告，不过不影响使用【技术有限，暂时无法解决】
+\renewcommand{\proofname}{\indent\bf 证明}
+\newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
+
+% 设置页面页边距
+\geometry{top=25.4mm,bottom=25.4mm,left=20mm,right=20mm,headheight=2.17cm,headsep=4mm,footskip=12mm}
+
+% 统一行间公式与上下文之间的间距
+\makeatletter
+\renewcommand\normalsize{%
+    \@setfontsize\normalsize{12}{15.5}%
+    \abovedisplayskip 6\p@ \@plus3\p@ \@minus7\p@
+    \abovedisplayshortskip \z@ \@plus3\p@
+    \belowdisplayshortskip 4\p@ \@plus3.5\p@ \@minus3\p@
+    \belowdisplayskip \abovedisplayskip
+    \let\@listi\@listI}
+\makeatletter
+
+% 设置列表环境的上下间距
+\setenumerate[1]{itemsep=5pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setitemize[1]{itemsep=5pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setdescription{itemsep=5pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+
+\linespread{1.6}
+\def\d{\textup{d}}
