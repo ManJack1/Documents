@@ -1,0 +1,222 @@
+%!TEX program = xelatex
+\documentclass[11pt, a4paper, oneside,UTF8]{ctexbook}
+\usepackage{amsmath, amsthm, amssymb, bm, graphicx, hyperref, mathrsfs}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{calc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{annotate-equations}
+\usepackage{extarrows}
+
+
+%setting annotate
+\renewcommand{\eqnannotationfont}{\bfseries\small}
+\usepackage{titlesec}
+\titleformat{\section}[hang]{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing{\section}{0pt}{\baselineskip}{0.5\baselineskip}
+
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+
+
+
+%colorbox
+\newcommand{\hlmath}[2]{\colorbox{#1!17}{$\displaystyle #2$}}
+%\newcommand{\highlight}[2]{\colorbox{#1!17}{$#2$}}
+\newcommand{\hltext}[2]{\colorbox{#1!47}{$\displaystyle #2$}}
+
+
+
+%setting mathenv
+\newtheorem{theorem}{\indent 定理}[section]
+\newtheorem{lemma}[theorem]{\indent 引理}
+\newtheorem{proposition}[theorem]{\indent 命题}
+\newtheorem{corollary}[theorem]{\indent 推论}
+\newtheorem{definition}{\indent 定义}[section]
+\newtheorem{example}{\indent 例}[section]
+\newtheorem{remark}{\indent 注}[section]
+\newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
+\renewcommand{\proofname}{\indent\bf 证明}
+
+
+\title{{\Huge{\textbf{Linear Algebra}}}\\------HOFFMAN AND RAY KUNZE}
+\author{ManJack}
+\date{\today}
+\linespread{1.5}
+
+
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\newpage
+\begin{center}
+	\Huge\textbf{前言}
+\end{center}~\
+
+这是数学系线      性代数的笔记，写给自己。如有错误请见谅，这些只是作为分享。
+~\\
+\begin{flushright}
+	\begin{tabular}{c}
+		ManJack \\
+	\end{tabular}
+\end{flushright}
+
+\newpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
+\today
+\tableofcontents
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\chapter{Linear Equations}
+\section{环和域}
+\subsection{加群和环的定义}
+\begin{definition}[\textbf{加群}]
+	假如一个\textbf{Abel群}的代数运算为加法，并且用符号‘+’表示，则该群叫做\textbf{加群}。
+
+\end{definition}
+
+\begin{remark}
+	加群的单位元e是唯一的，且e=0。称作\textbf{零元},我们有以下的计算规则:
+	\[
+		0+a=a+0=a
+	\]
+\end{remark}
+
+\begin{definition}[\textbf{环}]
+	一个集合R称之为环满足：
+	\begin{enumerate}
+		\item R是一个加群
+		\item R对一个乘法来说是一个半群(半群是一个群胚+结合律)
+		\item 在集合R上，乘法对加法满足分配率a(b+c)=(ab+ac)
+	\end{enumerate}
+\end{definition}
+
+\subsection{交换元、单位元、零因子、整环}
+\begin{definition}[\textbf{交换环}]
+	一个环叫做一个交换环，假如:\[
+		ab = ba
+	\]
+\end{definition}
+
+在环中乘法运算下的单位元，叫做环的单位元。
+\begin{definition}[\textbf{单位元}]
+	环中的单位元e,假如对于R的任意元素a来说，有:
+
+
+	\[
+		\eqnmarkbox[red]{e_1}{e}a = a \eqnmarkbox[red]{e_2}{e} = a
+	\]
+
+	\annotate[yshift=-0.5em]{below}{e_1,e_2}{单位元}
+
+
+\end{definition}
+
+
+\begin{definition}[零因子]
+	一个环中的两个元素a,b之间如果有一个是0,那么ab=0.
+	但反之不成立.\[
+		ab = 0 \xLongrightarrow{\textbf{不成立}}a=0 \ or \ b = 0
+	\]
+\end{definition}
+
+\begin{example}
+	例如模n的\textbf{剩余类环}:假设n=ab\\
+	若n不是素数,假设：\[
+		[\alpha]\neq  [0],[b]\neq  [0],[\alpha][b]=[\alpha b]=[n]=[0]
+	\]
+	则我们可以得知$ ab = 0 \xLongrightarrow{\textbf{不成立}}a=0 \ or \ b = 0
+	$
+\end{example}
+\begin{remark}
+	若是在一个环里,
+	\[
+		a\leq 0,b\neq 0,ab=0
+	\]则a被称为\textbf{左零因子},b被称为\textbf{右零因子}
+\end{remark}
+\begin{definition}[整环]
+	一个环叫做\textbf{整环},满足:
+	\begin{enumerate}
+		\item 乘法交换律：\[
+			      ab = ba
+		      \]
+		\item R有单位元1:\[
+			      1a=a1=a
+		      \]
+		\item R没有零因子:\[
+			      ab=0 \xLongrightarrow{}  a = 0\ or \ b=0
+		      \]
+	\end{enumerate}
+\end{definition}
+\begin{remark}
+	a,b可以是任意R中的元.
+\end{remark}
+\subsection{除环、域}
+
+\begin{definition}[除环]
+	一个环R叫做一个除环，满足：
+	\begin{enumerate}
+		\item R至少包含一个不为0的元
+		\item R有一个单位元
+		\item R的每个不等于0的元有一个逆元
+	\end{enumerate}
+\end{definition}
+\begin{definition}[除环]
+
+
+	一个集合 $F$ 被称为域，如果满足以下条件：
+	\begin{enumerate}
+		\item 加法封闭性：$\forall a, b \in F$，有 $a + b \in F$。
+		\item 加法可交换性：$\forall a, b \in F$，有 $a + b = b + a$。
+		\item 加法单位元素：存在加法单位元素 0，使得 $\forall a \in F$，有 $a + 0 = a$。
+		\item 加法逆元素：$\forall a \in F$，存在加法逆元素 $-a$，使得 $a + (-a) = 0$。
+		\item 乘法封闭性：$\forall a, b \in F$，有 $a \cdot b \in F$。
+		\item 乘法可交换性：$\forall a, b \in F$，有 $a \cdot b = b \cdot a$。
+		\item 乘法单位元素：存在乘法单位元素 1，使得 $\forall a \in F$，有 $a \cdot 1 = a$。
+		\item 乘法逆元素：$\forall a \in F$，对于非零元素，存在乘法逆元素 $a^{-1}$，使得 $a \cdot a^{-1} = 1$。
+		\item 分配律：$\forall a, b, c \in F$，满足 $(a + b) \cdot c = a \cdot c + b \cdot c$。
+	\end{enumerate}
+
+\end{definition}
+
+\begin{definition}[Subfiled]
+
+	设 $F$ 是一个域。如果 $K \subseteq F$ 满足以下条件，则称 $K$ 是 $F$ 的\emph{子域}：
+	\begin{enumerate}
+		\item $K$ 非空，并且包含域 $F$ 中的加法单位元素 0 和乘法单位元素 1。
+		\item 对于任意的 $a$ 和 $b$ 属于 $K$，$a + b$ 和 $a \cdot b$ 也都属于 $K$（其中 $+$ 和 $\cdot$ 分别表示域 $F$ 中的加法和乘法运算）。
+		\item 对于任意的 $a$ 属于 $K$，它的相反元素 $-a$ 也属于 $K$。
+		\item 对于任意的非零元素 $a$ 属于 $K$，它的乘法逆元素 $a^{-1}$ 也属于 $K$。
+	\end{enumerate}
+\end{definition}
+
+
+\begin{definition}[Characteristic]
+	In abstract algebra, "characteristic" is an important concept for a ring or a field. The characteristic is used to describe the smallest positive integer $n$ for which $n$ times the multiplicative identity $1$ equals the additive identity (usually denoted as $0$) in the algebraic structure.
+
+	For a ring (a set with addition and multiplication operations, satisfying certain algebraic rules), the characteristic refers to the smallest positive integer $n$ such that $n$ times $1$ equals $0$ (or defined as $0$ if there is no such $n$).
+
+	For a field (a special type of ring where every non-zero element has a multiplicative inverse), the characteristic is also a positive integer $n$ or zero, representing $n$ times $1$ equals $0$ or having characteristic zero if there is no such $n$.
+
+	The significance of the characteristic lies in its impact on the properties and structure of the ring or field. Particularly, in the case of a field, the characteristic is either a prime number or zero. This distinction is useful as it allows us to differentiate between fields of different characteristics and has important applications in properties of algebraic equations and polynomials.
+\end{definition}
+
+\begin{definition}[asd]
+	
+\end{definition}
+
+
+\end{document}
