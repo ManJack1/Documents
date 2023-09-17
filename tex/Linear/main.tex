@@ -12,6 +12,11 @@
 \usepackage{annotate-equations}
 \usepackage{extarrows}
 
+\usepackage{xcolor} % for \textcolor
+
+\newenvironment{note}
+{\par\textcolor{blue}{\bfseries Note:}\itshape}
+{\par}
 
 %setting annotate
 \renewcommand{\eqnannotationfont}{\bfseries\small}
@@ -219,16 +224,31 @@
 
 
 
-
 Suppose F is a field,We consider the problem of finding n scalars(element of F)$x_1,\cdot,x_n$ which satisfy the conditions
-\begin{align}
-	A_{11}x_1 + A_{12}x_2 + \cdots + A_{1n}x_n = y_1, \\
-	A_{21}x_1 + A_{22}x_2 + \cdots + A_{2n}x_n = y_2, \\
-	\vdots                                            \\
-	A_{m1}x_1 + A_{m2}x_2 + \cdots + A_{mn}x_n = y_m.
-\end{align}
-\[
-	\alpha
-\]
+
+\begin{equation}
+  \begin{aligned}
+    A_{11}+A_{12}x_1+\cdots+A_{1n}x_n &= 0 \\
+    A_{21}+A_{22}x_1+\cdots+A_{2n}x_n &= 0 \\
+    & \,\,\,\, \vdots \\
+    A_{m1}+A_{m2}x_1+\cdots+A_{mn}x_n &= 0
+  \end{aligned}
+  \label{eq:system_of_linear_equations}
+\end{equation}
+where $y_1,y_2,\cdots,y_n$ and $A_{ij},1\leq i,j\leq n$ are given elements of F.
+We call \ref{eq:system_of_linear_equations} this a \textbf{system of m linear equations} in n unknowns.
+Any n-tuple $(x_1,x_2,\cdots,x_n)$ of elements of F which satisfies each of the equation in \ref{eq:system_of_linear_equations} is called a solution of the system.If $y_1 = y_2 = \cdots = y_m = 0$,
+we say that the system is \textbf{homogeneous},or that each of equations is hommogenous,
+
+\begin{definition}[\textbf{linear combination}]
+  For the \ref{eq:system_of_linear_equations},suppose we select m scalars $c_1,\cdots,c_m$,multiply the jth equation by $c_j$ and then add.
+  \begin{displaymath}
+      (c_1A_{11}+\cdots+c_mA_{m1})x_1+\cdots+(c_1A_{m1}+\cdots+c_mA_{mn})x_n = c_1y_1+\cdots+c_my_m 
+  \end{displaymath}
+\end{definition}
+
+\begin{note}
+    Evidently,any solution of the entire system of equations \ref{eq:system_of_linear_equations} whill also be a solution of this new equaiton
+\end{note}
 % section System of linear Equations (end)
 \end{document}
