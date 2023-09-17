@@ -1,12 +1,23 @@
+// TODO:第一章
+/* #include <iostream> */
+/**/
+/* int main() { */
+/*   std::cout << "HelloWorld!" << std::endl; */
+/*   std::cout << "MotherFucker!" << std::endl; */
+/**/
+/*   std::cout << 3 + 4; */
+/*   return 0; */
+/* } */
+
+// NOTE:输入
+
 #include <iostream>
 #include <string>
-
-using namespace std;
 int main() {
-  const int line_size = 8;
-  int cnt = 1;
-  int a = 1, b = 2, c = 3;
-  cout << (cnt % line_size ? "name" : "sad") << "\n";
-  cout << (a == c or b == a);
+  std::cout << "Please enter your first name:";
+  std::string name;
+  std::cin >> name;
+
+  std::cout << "hellow," << name << "!" << std::endl;
   return 0;
 }
