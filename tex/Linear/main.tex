@@ -70,17 +70,18 @@
 \end{center}~\
 
 这是数学系线      性代数的笔记，写给自己。如有错误请见谅，这些只是作为分享。
-~\\
+~
 \begin{flushright}
 	\begin{tabular}{c}
 		MaJack \\
+		\today
 	\end{tabular}
 \end{flushright}
 
 \newpage
 \pagenumbering{Roman}
 \setcounter{page}{1}
-\today
+
 \tableofcontents
 \newpage
 \setcounter{page}{1}
@@ -227,13 +228,13 @@
 Suppose F is a field,We consider the problem of finding n scalars(element of F)$x_1,\cdot,x_n$ which satisfy the conditions
 
 \begin{equation}
-  \begin{aligned}
-    A_{11}+A_{12}x_1+\cdots+A_{1n}x_n &= 0 \\
-    A_{21}+A_{22}x_1+\cdots+A_{2n}x_n &= 0 \\
-    & \,\,\,\, \vdots \\
-    A_{m1}+A_{m2}x_1+\cdots+A_{mn}x_n &= 0
-  \end{aligned}
-  \label{eq:system_of_linear_equations}
+	\begin{aligned}
+		A_{11}+A_{12}x_1+\cdots+A_{1n}x_n & = 0             \\
+		A_{21}+A_{22}x_1+\cdots+A_{2n}x_n & = 0             \\
+		                                  & \,\,\,\, \vdots \\
+		A_{m1}+A_{m2}x_1+\cdots+A_{mn}x_n & = 0
+	\end{aligned}
+	\label{eq:system_of_linear_equations}
 \end{equation}
 where $y_1,y_2,\cdots,y_n$ and $A_{ij},1\leq i,j\leq n$ are given elements of F.
 We call \ref{eq:system_of_linear_equations} this a \textbf{system of m linear equations} in n unknowns.
@@ -241,31 +242,31 @@ Any n-tuple $(x_1,x_2,\cdots,x_n)$ of elements of F which satisfies each of the 
 we say that the system is \textbf{homogeneous},or that each of equations is hommogenous,
 
 \begin{definition}[\textbf{linear combination}]
-  For the \ref{eq:system_of_linear_equations},suppose we select m scalars $c_1,\cdots,c_m$,multiply the jth equation by $c_j$ and then add.
-  \begin{displaymath}
-      (c_1A_{11}+\cdots+c_mA_{m1})x_1+\cdots+(c_1A_{m1}+\cdots+c_mA_{mn})x_n = c_1y_1+\cdots+c_my_m 
-  \end{displaymath}
+	For the \ref{eq:system_of_linear_equations},suppose we select m scalars $c_1,\cdots,c_m$,multiply the jth equation by $c_j$ and then add.
+	\begin{displaymath}
+		(c_1A_{11}+\cdots+c_mA_{m1})x_1+\cdots+(c_1A_{m1}+\cdots+c_mA_{mn})x_n = c_1y_1+\cdots+c_my_m
+	\end{displaymath}
 \end{definition}
 
 \begin{note}
-    Evidently,any solution of the entire system of equations \ref{eq:system_of_linear_equations} will also be a solution of this new equaiton
+	Evidently,any solution of the entire system of equations \ref{eq:system_of_linear_equations} will also be a solution of this new equaiton
 \end{note}
 
-\begin{definition}[Linear equivalent]
-  Let us say that two systems of linear equations are \textbf{linearly equivalent} if each equation of one is a linear combination of the equations of the other.
-  \begin{equation}  
-  \begin{aligned}
-    B_{11}+B_{12}x_1+\cdots+B_{1n}x_n &= z_1 \\
-    B_{21}+B_{22}x_1+\cdots+B_{2n}x_n &= z_2 \\
-    & \,\,\,\, \vdots \\
-    B_{m1}+B_{m2}x_1+\cdots+B_{mn}x_n &= z_m
-  \end{aligned} 
-  \label{eq:linear_equivalent}
-\end{equation}
+\begin{definition}[\textbf{Linear equivalent}]
+	Let us say that two systems of linear equations are \textbf{linearly equivalent} if each equation of one is a linear combination of the equations of the other.
+	\begin{equation}
+		\begin{aligned}
+			B_{11}+B_{12}x_1+\cdots+B_{1n}x_n & = z_1           \\
+			B_{21}+B_{22}x_1+\cdots+B_{2n}x_n & = z_2           \\
+			                                  & \,\,\,\, \vdots \\
+			B_{m1}+B_{m2}x_1+\cdots+B_{mn}x_n & = z_m
+		\end{aligned}
+		\label{eq:linear_equivalent}
+	\end{equation}
 \end{definition}
 
 \begin{theorem}
-  Equivalent system of linear equations have exactly the same solutions.
+	Equivalent system of linear equations have exactly the same solutions.
 \end{theorem}
 
 \section{Matrix and Elementary Row Operations}
@@ -273,65 +274,65 @@ there is no need to conttinue writing the 'unkonwns' $x_1,x_2,\cdots,x_n$ in the
 since one actually compute onlu with the coefficient $A_{ij}$ and the scalars  $y_i$\\
 We shall now abbreviate the system \ref{eq:system_of_linear_equations} by writing:
 \[
-  AX=Y 
-  \label{eq:AX=Y}
+	AX=Y
+	\label{eq:AX=Y}
 \]
 where:
 \begin{equation}
-  \eqnmarkbox[red]{linear-A}{A} = \begin{bmatrix}
-    A_{11} & A_{12} & \cdots & A_{1n} \\
-    A_{21} & A_{22} & \cdots & A_{2n} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    A_{m1} & A_{m2} & \cdots & A_{mn} \\
-  \end{bmatrix}
-  \annotate[yshift=-2.5em,xshift=0.5]{below}{linear-A}{A is the matrix of coefficient of the system}
-  \label{eq:A equals}
+	\eqnmarkbox[red]{linear-A}{A} = \begin{bmatrix}
+		A_{11} & A_{12} & \cdots & A_{1n} \\
+		A_{21} & A_{22} & \cdots & A_{2n} \\
+		\vdots & \vdots & \ddots & \vdots \\
+		A_{m1} & A_{m2} & \cdots & A_{mn} \\
+	\end{bmatrix}
+	\annotate[yshift=-2.5em,xshift=0.5]{below}{linear-A}{A is the matrix of coefficient of the system}
+	\label{eq:A equals}
 \end{equation}
 \\
 \begin{center}
 
-   
-$
-  X = \begin{bmatrix}
-    x_1 \\
-    x_2 \\
-    \vdots \\
-    x_n \\
-  \end{bmatrix}
-$ \quad and \quad $
-  Y = \begin{bmatrix}
-    y_1 \\
-    y_2 \\
-    \vdots \\
-    y_m \\
-  \end{bmatrix}
-$
+
+	$
+		X = \begin{bmatrix}
+			x_1    \\
+			x_2    \\
+			\vdots \\
+			x_n    \\
+		\end{bmatrix}
+	$ \quad and \quad $
+		Y = \begin{bmatrix}
+			y_1    \\
+			y_2    \\
+			\vdots \\
+			y_m    \\
+		\end{bmatrix}
+	$
 \end{center}
 \begin{remark}
-  \begin{enumerate}
-    \item The entries of the matrix A are the scalars A(i,j) = $A_{ij}$ 
-    \item The matrix A is an m $\times$ n matrix
-    \item The matrix X is an n $\times$ 1 matrix
-    \item The matrix Y is an m $\times$ 1 matrix
-    \item The AX = Y is nothing more than a compact way of writing the system of linear equations 
-      \ref{eq:AX=Y}
-  \end{enumerate}
+	\begin{enumerate}
+		\item The entries of the matrix A are the scalars A(i,j) = $A_{ij}$
+		\item The matrix A is an m $\times$ n matrix
+		\item The matrix X is an n $\times$ 1 matrix
+		\item The matrix Y is an m $\times$ 1 matrix
+		\item The AX = Y is nothing more than a compact way of writing the system of linear equations
+		      \ref{eq:AX=Y}
+	\end{enumerate}
 \end{remark}
 
 The elementary row operations on an $m \times n$ matrix A over the field F:
 \begin{enumerate}
-  \item multiply of one row of A by a none-zero scalar c; 
-  \item interchange of two rows of A;
-  \item replacement of the rth row of A by row r plus c time row s,c any scalar and r $\neq$ s,
+	\item multiply of one row of A by a none-zero scalar c;
+	\item interchange of two rows of A;
+	\item replacement of the rth row of A by row r plus c time row s,c any scalar and r $\neq$ s,
 \end{enumerate}
 
 An elementary row operation is thus a special type of function eith domain the set of all $m \times n$ matrices over F and range the same set.
 One can describe e in the three cases as follow:
 \begin{enumerate}
-  \item $e(A)_{ij} = A_{ij} \quad if \quad  i \neq r ,e(A)_{rj} = cA_{rj}$
-  \item $e(A)_{ij} = A_{ij} \quad if \quad  i \neq r,s ,e(A)_{rj} = A_{sj},e(A)_{sj} = A_{rj}$
-  \item $e(A)_{ij} = A_{ij} \quad if \quad  i \neq r ,e(A)_{rj} = A_{rj}+cA_{sj}$
-    \label{eq:elementary_row_operations describe}
+	\item $e(A)_{ij} = A_{ij} \quad if \quad  i \neq r ,e(A)_{rj} = cA_{rj}$
+	\item $e(A)_{ij} = A_{ij} \quad if \quad  i \neq r,s ,e(A)_{rj} = A_{sj},e(A)_{sj} = A_{rj}$
+	\item $e(A)_{ij} = A_{ij} \quad if \quad  i \neq r ,e(A)_{rj} = A_{rj}+cA_{sj}$
+	      \label{eq:elementary_row_operations describe}
 \end{enumerate}
 %TODO:page 6
 % section System of linear Equations (end)
