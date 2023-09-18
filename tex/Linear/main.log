@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.9.15)  18 SEP 2023 12:35
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.9.15)  18 SEP 2023 13:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -877,7 +877,12 @@ LaTeX Font Warning: Font shape `TU/FandolSong-Regular(0)/b/it' undefined
 ]
 LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.95> not available
 (Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on input line 196.
- [2] [3] [4] (./main.aux)
+ [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 289--291
+
+ []
+
+[4] [5] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -885,12 +890,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8551C4CDAE98F303D5154FD33A35E3EC;1026.
  ) 
 Here is how much of TeX's memory you used:
- 30328 strings out of 478682
- 680573 string characters out of 5849665
+ 30402 strings out of 478682
+ 682326 string characters out of 5849665
  1862018 words of memory out of 5000000
- 49894 multiletter control sequences out of 15000+600000
- 525138 words of font info for 114 fonts, out of 8000000 for 9000
+ 49967 multiletter control sequences out of 15000+600000
+ 525146 words of font info for 115 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,12n,97p,569b,835s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (8 pages, 71548 bytes).
+Output written on main.xdv (9 pages, 82948 bytes).
