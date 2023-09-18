@@ -11,7 +11,7 @@
 \usepackage{geometry}
 \usepackage{annotate-equations}
 \usepackage{extarrows}
-
+\usepackage{thmbox}
 \usepackage{xcolor} % for \textcolor
 
 \newenvironment{note}
@@ -41,15 +41,13 @@
 
 
 %setting mathenv
-\newtheorem{theorem}{\indent 定理}[section]
-\newtheorem{lemma}[theorem]{\indent 引理}
-\newtheorem{proposition}[theorem]{\indent 命题}
-\newtheorem{corollary}[theorem]{\indent 推论}
-\newtheorem{definition}{\indent 定义}[section]
-\newtheorem{example}{\indent 例}[section]
-\newtheorem{remark}{\indent 注}[section]
-\newenvironment{solution}{\begin{proof}[\indent\bf 解]}{\end{proof}}
-\renewcommand{\proofname}{\indent\bf 证明}
+\newtheorem[M]{theorem}{Theorem}[section]
+\newtheorem[M]{lemma}[theorem]{Lemma}
+\newtheorem[M]{proposition}[theorem]{Proposition}
+\newtheorem[M]{corollary}[theorem]{Corollary}
+\newtheorem[M]{definition}{Definition}[section]
+\newtheorem[M]{example}{Example}[section]
+\newtheorem[M]{remark}{Remark}[section]
 
 
 \title{{\Huge{\textbf{Linear Algebra}}}\\------HOFFMAN AND RAY KUNZE}
