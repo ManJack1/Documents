@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.9.15)  18 SEP 2023 11:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.9.15)  18 SEP 2023 12:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -882,15 +882,15 @@ LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.95> n
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 497CC02268F1CF2F30E59A0C8D29B82A;780.
+(rerunfilecheck)             Checksum: 8551C4CDAE98F303D5154FD33A35E3EC;1026.
  ) 
 Here is how much of TeX's memory you used:
- 30326 strings out of 478682
- 680538 string characters out of 5849665
+ 30328 strings out of 478682
+ 680573 string characters out of 5849665
  1862018 words of memory out of 5000000
- 49892 multiletter control sequences out of 15000+600000
+ 49894 multiletter control sequences out of 15000+600000
  525138 words of font info for 114 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,12n,97p,569b,835s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (8 pages, 62912 bytes).
+Output written on main.xdv (8 pages, 71548 bytes).

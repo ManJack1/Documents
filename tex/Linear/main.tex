@@ -248,13 +248,64 @@ we say that the system is \textbf{homogeneous},or that each of equations is homm
 \end{definition}
 
 \begin{note}
-    Evidently,any solution of the entire system of equations \ref{eq:system_of_linear_equations} whill also be a solution of this new equaiton
+    Evidently,any solution of the entire system of equations \ref{eq:system_of_linear_equations} will also be a solution of this new equaiton
 \end{note}
-\begin{align}
-  A_{11}x_1+\cdots+A_{1n}x_n &= y_1 \\
-  A_{21}x_1+\cdots+A_{2n}x_n &= y_2 \\ 
-  & \,\,\,\, \vdots \\
-  A_{m1}x_1+\cdots+A_{mn}x_n &= y_m
-\end{align}
+
+\begin{definition}[Linear equivalent]
+  Let us say that two systems of linear equations are \textbf{linearly equivalent} if each equation of one is a linear combination of the equations of the other.
+  \begin{equation}  
+  \begin{aligned}
+    B_{11}+B_{12}x_1+\cdots+B_{1n}x_n &= z_1 \\
+    B_{21}+B_{22}x_1+\cdots+B_{2n}x_n &= z_2 \\
+    & \,\,\,\, \vdots \\
+    B_{m1}+B_{m2}x_1+\cdots+B_{mn}x_n &= z_m
+  \end{aligned} 
+  \label{eq:linear_equivalent}
+\end{equation}
+\end{definition}
+
+\begin{theorem}
+  Equivalent system of linear equations have exactly the same solutions.
+\end{theorem}
+
+\section{Matrix and Elementary Row Operations}
+there is no need to conttinue writing the 'unkonwns' $x_1,x_2,\cdots,x_n$ in the system of linear equations \ref{eq:system_of_linear_equations},
+since one actually compute onlu with the coefficient $A_{ij}$ and the scalars  $y_i$\\
+We shall now abbreviate the system \ref{eq:system_of_linear_equations} by writing:
+\[
+  AX=Y 
+\]
+where:
+\begin{equation}
+  A = \begin{bmatrix}
+    A_{11} & A_{12} & \cdots & A_{1n} \\
+    A_{21} & A_{22} & \cdots & A_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    A_{m1} & A_{m2} & \cdots & A_{mn} \\
+  \end{bmatrix}
+  \label{eq:A equals}
+\end{equation}
+\begin{center}
+   
+$
+  X = \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    \vdots \\
+    x_n \\
+  \end{bmatrix}
+$ \quad and \quad $
+  Y = \begin{bmatrix}
+    y_1 \\
+    y_2 \\
+    \vdots \\
+    y_m \\
+  \end{bmatrix}
+$
+\end{center}
+
+
+
 % section System of linear Equations (end)
 \end{document}
+
