@@ -14,9 +14,18 @@
 \usepackage{thmbox}
 \usepackage{xcolor} % for \textcolor
 
+
 \newenvironment{note}
 {\par\textcolor{blue}{\bfseries Note:}\itshape}
 {\par}
+
+
+\newenvironment{remark}
+{\par\textcolor{blue}{\bfseries Remark:}\itshape}
+{\par}
+
+
+
 
 %setting annotate
 \renewcommand{\eqnannotationfont}{\bfseries\small}
@@ -46,9 +55,6 @@
 \newtheorem[M]{proposition}[theorem]{Proposition}
 \newtheorem[M]{corollary}[theorem]{Corollary}
 \newtheorem[M]{definition}{Definition}[section]
-\newtheorem[M]{example}{Example}[section]
-\newtheorem[M]{remark}{Remark}[section]
-
 
 \title{{\Huge{\textbf{Linear Algebra}}}\\------HOFFMAN AND RAY KUNZE}
 \author{ManJack}
@@ -116,6 +122,9 @@
 \end{definition}
 
 在环中乘法运算下的单位元，叫做环的单位元。
+
+\newpage
+
 \begin{definition}[\textbf{单位元}]
 	环中的单位元e,假如对于R的任意元素a来说，有:
 
@@ -168,6 +177,7 @@
 \begin{remark}
 	a,b可以是任意R中的元.
 \end{remark}
+\newpage
 \subsection{除环、域}
 
 \begin{definition}[除环]
@@ -207,7 +217,7 @@
 	\end{enumerate}
 \end{definition}
 
-
+\newpage
 \begin{definition}[Characteristic]
 	In abstract algebra, "characteristic" is an important concept for a ring or a field. The characteristic is used to describe the smallest positive integer $n$ for which $n$ times the multiplicative identity $1$ equals the additive identity (usually denoted as $0$) in the algebraic structure.
 
@@ -249,7 +259,7 @@ we say that the system is \textbf{homogeneous},or that each of equations is homm
 \begin{note}
 	Evidently,any solution of the entire system of equations \ref{eq:system_of_linear_equations} will also be a solution of this new equaiton
 \end{note}
-
+\newpage
 \begin{definition}[\textbf{Linear equivalent}]
 	Let us say that two systems of linear equations are \textbf{linearly equivalent} if each equation of one is a linear combination of the equations of the other.
 	\begin{equation}
@@ -306,6 +316,7 @@ where:
 		\end{bmatrix}
 	$
 \end{center}
+\newpage
 \begin{remark}
 	\begin{enumerate}
 		\item The entries of the matrix A are the scalars A(i,j) = $A_{ij}$

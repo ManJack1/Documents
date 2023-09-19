@@ -1,24 +1,30 @@
 # Fdb version 4
-["xdvipdfmx"] 1695018938 "main.xdv" "main.pdf" "main" 1695018938 0
-  "main.xdv" 1695018938 84784 3354d94c048c396b264db33b410f2b9b "xelatex"
+["xdvipdfmx"] 1695049320 "main.xdv" "main.pdf" "main" 1695049320 0
+  "main.xdv" 1695049320 84596 6f21f8cbd196bafbc0a2aa85d6a55548 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1695018937 "main.tex" "main.xdv" "main" 1695018938 0
+["xelatex"] 1695049319 "main.tex" "main.xdv" "main" 1695049320 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1689853683 1528 f853c4d1b4e0550255e02831fdc8496f ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1689853683 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1689853683 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1689853683 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1689853683 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm" 1689853683 1496 c79f6914c6d39ffb3759967363d1be79 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm" 1689853683 1508 6e807ff901c35a5f1fde0ca275533df8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1689853683 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1689853683 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1689853683 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1689853683 908 2921f8a10601f252058503cc6570e581 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1689853683 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1689853683 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm" 1689853683 1116 4e6ba9d7914baa6482fd69f67d126380 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1689853683 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1689853683 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1689853683 1332 f817c21a1ba54560425663374f1b651a ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1689853683 1344 8a0be4fe4d376203000810ad4dc81558 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1689853683 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1689853683 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1689853683 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1689853683 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -35,6 +41,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1689853683 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1689853683 688 37338d6ab346c2f1466b29e195316aa4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1689853683 684 3a51bd4fd9600428d5264cf25f04bb9a ""
+  "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1689853683 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1689853683 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1689853683 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/share/texmf-dist/tex/generic/bitset/bitset.sty" 1689853683 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -208,10 +215,10 @@
   "/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty" 1689853683 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1694778403 9219900 132e8ee01c94cef4531f6fcb9aed691a ""
-  "main.aux" 1695018938 2735 a1615b6211b57b64885810271f7d63b5 "xelatex"
-  "main.out" 1695018938 1026 8551c4cdae98f303d5154fd33a35e3ec "xelatex"
-  "main.tex" 1695018932 11716 829eb858ee901726867837974fca509a ""
-  "main.toc" 1695018938 630 efaebb375122c815dca3c4b0c8b33ad4 "xelatex"
+  "main.aux" 1695049320 2737 0b8e7cbf740c1c5877aad61c7b4e075c "xelatex"
+  "main.out" 1695049320 1026 8551c4cdae98f303d5154fd33a35e3ec "xelatex"
+  "main.tex" 1695049317 11765 8a38d0bed552abe7e1d255bafd0df809 ""
+  "main.toc" 1695049320 630 12a34baacf544435d88cf2719953f684 "xelatex"
   (generated)
   "main.aux"
   "main.log"
