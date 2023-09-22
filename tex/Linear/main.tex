@@ -344,7 +344,102 @@ One can describe e in the three cases as follows:
 	      \label{eq:elementary_row_operations describe}
 \end{enumerate}
 %TODO:page 6
-% section System of linear Equations (end)
+% section System of linear Equations end)
+
+\begin{theorem}
+  To each elementaty row opeatrion e there corrspoonds an elementaty row opeation $e_1$ , of the 
+  same type as e,such that $e_1(e(A)) = e(e_1(A)) = A$. In other words, the inverse opeation  of an elementaty row operation is also an elementaty row operation of the same type. 
+  \label{thm:elementary_row_operation_inverse}
+\end{theorem}
+
+\begin{definition}
+  If A and B are $m \times n$ matrices over F,we say that A is row equivalent to B if there is a finite sequence of elementary row operations which transforms A into B.
+\end{definition}
+\begin{remark}
+  Using Theorem \ref{thm:elementary_row_operation_inverse},we can find a easy way to verify the following.Each matrix is rwo-equivalent to itself;if B is row-equivalent to A.then A is row-equivalent to B;if B is row-equivalent to A and C is row-equivalent to B,then C is row-equivalent to A.
+
+\end{remark}
+
+
+\begin{theorem}
+ If A and B are row-equivalent \(m \times n\) matrices over the field F,we say that B is row-equivalent to A if B can be obtained from A by a finite sequence of elementaty row operations. 
+\label{thm:row_equivalent}
+\end{theorem}
+
+
+\begin{theorem}
+  If A and B are row-equivalent \(m \times n\) matrices over the field F,then the system of linear equations AX = 0 is equivalent to the system of linear equations BX = 0.
+\end{theorem}
+
+\begin{proof}
+  suppose we pass from A to B by a finite sequence of elementary row operations:
+  \begin{equation}
+A = A_0 \rightarrow A_1 \rightarrow \cdots \rightarrow A_n = B
+    \label{eq:proof_row_equivalent have same solution}
+  \end{equation}
+\end{proof}
+
+
+\begin{definition}
+  An $m \times n$ matrix R is called row-reduced if:
+  \begin{enumerate}
+    \item the first non-zero entry in each row of R is 1;
+    \item each column of R which contains the leading non-zero entry of some row has all its other entries 0.
+  \end{enumerate}
+  \label{def:row_reduced_matrix}
+\end{definition}
+  \begin{remark}
+  The item 2 implies the num of row is more than the num of column.because if the num of row is less than the num of column,there must be a column which has no leading non-zero entry of some row,then the item 2 can't be satisfied.
+  \\ There is a example:
+  \begin{equation*}
+  \begin{bmatrix}
+  1 & 0 & 0 & 0 \\
+  0 & 1 & 0 & 0 \\
+  0 & 0 & 1 & 0 \\
+  \end{bmatrix} 
+  \end{equation*}
+
+  This matrix is not row-reduced matrix because the num of row is less than the num of column.
+
+  \end{remark}
+
+  \begin{theorem}
+  Every $m \times n$ matrix over the field F is row-equivalent to a row-reduced matrix. 
+  \end{theorem}
+
+  \begin{definition}
+  An $m \times n$ matrix R is called a \textbf{row-reduced echelon matrix} if: 
+  \begin{enumerate}
+    \item R is a row-reduced matrix;
+    \item every row of R which has all its entries o occurs below every row which has a non-zero entry;
+    \item if rows $1,\cdots ,r$ are the non-zero rows of R,and if the leading non-zero entry of row i occurs in column $k_i, i = 1,\dots,r,$ then $k_1 \leq k_2 <\dots<k_r$
+
+  \end{enumerate}
+  
+  \end{definition}
+
+  \begin{theorem}
+    Every $m \times n$ matrix A is row-equivalent to a row-reduced echelon matrix. 
+  \end{theorem}
+\newpage
+  \begin{theorem}
+   If A is an $m \times n$ matrix and $m \leq n$,the the homogeneous system of linear equations AX = 0 has a non-trivial solution.
+  \end{theorem}
+
+\begin{proof}
+  
+\end{proof}
+
+
+
+\begin{theorem}
+if A is an $n \times n$ matrix, then A is row-equivalent to the identity matrix if and only if the system of linear equations AX = 0 has only the trivial solution.
+\end{theorem}
+
+\begin{proof}
+  
+\end{proof}
+%TODO:page 13
 
 \end{document}
 
