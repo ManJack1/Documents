@@ -1139,6 +1139,10 @@ INPUT ./main.toc
 INPUT main.toc
 INPUT main.toc
 OUTPUT main.toc
+INPUT ./chapter/chapter1.tex
+INPUT chapter/chapter1.tex
+INPUT ./chapter/chapter1.tex
+INPUT chapter/chapter1.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm

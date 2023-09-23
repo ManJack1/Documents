@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.9.15)  22 SEP 2023 19:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.9.15)  22 SEP 2023 22:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -869,26 +869,26 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
  [1
 
-]
+] (./chapter/chapter1.tex
 第一章
 
 LaTeX Font Warning: Font shape `TU/FandolSong-Regular(0)/b/it' undefined
-(Font)              using `TU/FandolSong-Regular(0)/b/n' instead on input line 96.
+(Font)              using `TU/FandolSong-Regular(0)/b/n' instead on input line 5.
 
 LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.95> not available
-(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on input line 97.
+(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on input line 6.
 
 LaTeX Font Warning: Font shape `TU/FandolSong-Regular(0)/b/sl' undefined
-(Font)              using `TU/FandolSong-Regular(0)/b/n' instead on input line 97.
+(Font)              using `TU/FandolSong-Regular(0)/b/n' instead on input line 6.
 
 [1
 
 ] [2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 298--300
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
 
  []
 
-[5] [6] [7] [8] (./main.aux)
+[5] [6] [7]) [8] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -896,10 +896,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8551C4CDAE98F303D5154FD33A35E3EC;1026.
  ) 
 Here is how much of TeX's memory you used:
- 30579 strings out of 478682
- 687956 string characters out of 5849665
+ 30585 strings out of 478682
+ 688066 string characters out of 5849665
  1861018 words of memory out of 5000000
- 50120 multiletter control sequences out of 15000+600000
+ 50122 multiletter control sequences out of 15000+600000
  530169 words of font info for 144 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,13n,97p,569b,815s stack positions out of 10000i,1000n,20000p,200000b,200000s
