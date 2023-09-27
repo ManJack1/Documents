@@ -1,0 +1,69 @@
+%!TEX program = xelatex
+\documentclass[11pt, a4paper, oneside, UTF8]{ctexbook}
+\usepackage{amsmath, amsthm, amssymb, bm, graphicx, hyperref, mathrsfs}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,arrows,shapes,tikzmark,calc}
+\usepackage{geometry}
+\usepackage{annotate-equations}
+\usepackage{extarrows}
+\usepackage{thmbox}
+
+% Custom environments and commands
+\newenvironment{note}
+{\par\textcolor{blue}{\bfseries Note:}\itshape}{\par}
+\newenvironment{remark}
+{\par\textcolor{blue}{\bfseries Remark:}\itshape}{\par}
+\newtheorem[M]{theorem}{Theorem}[section]
+\newtheorem[M]{lemma}[theorem]{Lemma}
+\newtheorem[M]{definition}{Definition}[section]
+\renewcommand{\eqnannotationfont}{\bfseries\small}
+
+\title{{\Huge{\textbf{GACD}}}\\------Teacher Wu}
+\author{ManJack}
+\date{\today}
+\linespread{1.5}
+
+\geometry{
+  a4paper,
+  total={170mm,257mm},
+  left=20mm,
+  top=20mm,
+}
+
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\newpage
+\begin{center}
+	\Huge\textbf{前言}
+\end{center}
+
+This is a GACD note-book for xupt. If there has much error in note-book,forgive me. It's just writes for me.
+
+\begin{flushright}
+	\begin{tabular}{c}
+		ManJack \\
+		\today
+	\end{tabular}
+\end{flushright}
+
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Linear Equations}
+
+% Start your content here
+\input{chapeter/chapeter1.tex}
+
+
+
+
+\end{document}

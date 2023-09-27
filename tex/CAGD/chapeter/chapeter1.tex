@@ -1,0 +1,90 @@
+\section{Introduction}
+Bezier curves are widely used in computer graphics and related fields. They are used to model smooth curves and surfaces, and are used in computer animation, CAD, and other fields. The curves, which are related to Bernstein polynomials, are named after Pierre B\'ezier, who used it in the 1960s for designing curves for the bodywork of Renault cars. Generalizations of B\'ezier curves to higher dimensions are called B\'ezier surfaces, of which the B\'ezier triangle is a special case.
+
+\section{Bezier Curves }
+
+\begin{definition}[Bezier Curve]
+
+	\begin{equation*}
+		F(t) = P_0 + \sum\limits_{i=1}^{n}a_if_i^{n}(t)
+	\end{equation*}
+	\begin{equation*}
+		f_i^{t}(t) = \frac{-t^i}{(i-1)!}\frac{d^{i-1}}{dt^{i-1}} \left[\frac{(1-n)^{n}-1}{t}\right] = \sum\limits_{j=1}^{n}(-1)^{i+j}\binom{n}{j}\binom{j-1}{i-1}t^{j}
+	\end{equation*}
+
+	\label{def:bezier_curve}
+\end{definition}
+
+\begin{remark}
+	This polynomial funcitons is given by Bezier
+\end{remark}
+Now we can write the Bezier curve as
+\subsection{Bezier Curves definition}
+\begin{definition}
+	n power Bezier curve is given by:
+	\begin{equation*}
+		P(t) = \sum\limits_{i=0}^{n}b_iB_i^n(t),t\in[0,1]
+	\end{equation*}
+\end{definition}
+
+\begin{remark}
+	The $b_i\in R_{}^{3}$ is the control point of the curve. The $B_{i}^{n}=\binom{n}{j}(1-t)_{}^{n-i}t^i$ is the Bernstein polynomial.
+\end{remark}
+
+\subsection{Bernstein polynomial characterization}
+
+\begin{enumerate}
+	\item unit decompostion \begin{equation*}
+		      1 = \left[t+(1-t)\right]^n = \sum\limits_{i=0}^{n}\binom{n}{i}t^i(1-t)^{n-i} = \sum\limits_{i=0}^{n}B_i^n(t)
+	      \end{equation*}
+	\item non-negative \begin{equation*}
+		      B_i^n(t)\geq 0
+	      \end{equation*}
+	\item The endpoint $B_{i}^{n}(0) = \begin{cases}
+			      1 , & i = 0    \\
+			      0 , & i \neq 0
+		      \end{cases}$,\quad$B_{i}^{n}(1)=\begin{cases}
+			      1 , & i = n    \\
+			      0 , & i \neq n
+		      \end{cases}$,$\left. \frac{dB_i^n(t)}{dt}\right|_{t=0}=\begin{cases}
+			      -n , & i = 0 \\
+			      n ,  & i = n \\
+			      0 = i \neq 0,n
+		      \end{cases}$,\\$\left. \frac{d B_{i}^{n}(t)}{dt}\right|_t=1 = \begin{cases}
+		      -n , & i = 0 \\
+		      n ,  & i = n \\
+		      0 = i \neq 0,n
+	      \end{cases}$
+	\item Symmetry \begin{equation*}
+		      B_{i}^{n}(t) = C_{n-i}^{n}(1-t)^{n-i}t^{i} = B_{n-i}^{n}(1-t)
+	      \end{equation*}
+	\item Derivative \begin{equation*}
+		      \frac{d B_{i}^{n}(t)}{dt} = n\left[B_{i-1}^{n-1}(t)-B_{i}^{n-1}(t)\right]
+	      \end{equation*}
+	\item Recursion \begin{equation*}
+		      B_{i}^{n}(t) = (1-t)B_{i}^{n-1}(t)+tB_{i-1}^{n-1}(t)
+	      \end{equation*}
+	\item The Maxium : The max of \begin{equation*}
+		      B_{i}^{n}(t) is B_{\lfloor n/2 \rfloor}^{n}(t)
+	      \end{equation*}
+
+	\item elevation \begin{equation*}
+		      B_{i}^{n}(t) = {(1 -\frac{i}{n+1}})B_{i}^{n+1}(t)+\frac{i+1}{n+1}B_{i-1}^{n+1}(t)
+	      \end{equation*}
+	\item partion formula:\begin{equation*}
+		      B_{i}^{n}(ct) = \sum_{n}^{j}B_{i}^{j}B_{j}^{n}(t)
+	      \end{equation*}
+
+	\item integral formula:\begin{equation*}
+		      \int_{0}^{1}B_{i}^{n}(t)dt = \frac{1}{n+1}
+	      \end{equation*}
+	\item conversion formula with power basis:\begin{equation*}
+		      t^j = \sum_{i=j}^{n}\frac{C_{n-j}^{i-j}}{C_{n}^{i}}B_{i}^{n}(t)
+	      \end{equation*}
+	\item Recursion formula:\begin{equation*}
+		      P_n(t) = P_n(b_0,b_1,...,b_n;t) = (1-t)P_{n-1}(b_0,b_1,...,b_{n-1};t)+tP_{n-1}(b_1,b_2,...,b_n;t)
+	      \end{equation*}
+	\item end point char:\begin{equation*}
+		      P_n(0) = b_0,P_n(1) = b_n
+	      \end{equation*}
+\end{enumerate}
