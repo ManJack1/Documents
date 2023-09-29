@@ -1,3 +1,5 @@
+\chapter{Bezier Curves}
+
 \section{Introduction}
 Bezier curves are widely used in computer graphics and related fields. They are used to model smooth curves and surfaces, and are used in computer animation, CAD, and other fields. The curves, which are related to Bernstein polynomials, are named after Pierre B\'ezier, who used it in the 1960s for designing curves for the bodywork of Renault cars. Generalizations of B\'ezier curves to higher dimensions are called B\'ezier surfaces, of which the B\'ezier triangle is a special case.
 
@@ -30,61 +32,136 @@ Now we can write the Bezier curve as
 \begin{remark}
 	The $b_i\in R_{}^{3}$ is the control point of the curve. The $B_{i}^{n}=\binom{n}{j}(1-t)_{}^{n-i}t^i$ is the Bernstein polynomial.
 \end{remark}
-
-\subsection{Bernstein polynomial characterization}
-
-\begin{enumerate}
-	\item unit decompostion \begin{equation*}
-		      1 = \left[t+(1-t)\right]^n = \sum\limits_{i=0}^{n}\binom{n}{i}t^i(1-t)^{n-i} = \sum\limits_{i=0}^{n}B_i^n(t)
-	      \end{equation*}
-	\item non-negative \begin{equation*}
-		      B_i^n(t)\geq 0
-	      \end{equation*}
-	\item The endpoint $B_{i}^{n}(0) = \begin{cases}
-			      1 , & i = 0    \\
-			      0 , & i \neq 0
-		      \end{cases}$,\quad$B_{i}^{n}(1)=\begin{cases}
-			      1 , & i = n    \\
-			      0 , & i \neq n
-		      \end{cases}$,$\left. \frac{dB_i^n(t)}{dt}\right|_{t=0}=\begin{cases}
+\newpage
+\begin{property}
+	\begin{enumerate}
+		\item unit decompostion \begin{equation*}
+			      1 = \left[t+(1-t)\right]^n = \sum\limits_{i=0}^{n}\binom{n}{i}t^i(1-t)^{n-i} = \sum\limits_{i=0}^{n}B_i^n(t)
+		      \end{equation*}
+		\item non-negative \begin{equation*}
+			      B_i^n(t)\geq 0
+		      \end{equation*}
+		\item The endpoint $B_{i}^{n}(0) = \begin{cases}
+				      1 , & i = 0    \\
+				      0 , & i \neq 0
+			      \end{cases}$,\quad$B_{i}^{n}(1)=\begin{cases}
+				      1 , & i = n    \\
+				      0 , & i \neq n
+			      \end{cases}$,$\left. \frac{dB_i^n(t)}{dt}\right|_{t=0}=\begin{cases}
+				      -n , & i = 0 \\
+				      n ,  & i = n \\
+				      0 = i \neq 0,n
+			      \end{cases}$,\\$\left. \frac{d B_{i}^{n}(t)}{dt}\right|_t=1 = \begin{cases}
 			      -n , & i = 0 \\
 			      n ,  & i = n \\
 			      0 = i \neq 0,n
-		      \end{cases}$,\\$\left. \frac{d B_{i}^{n}(t)}{dt}\right|_t=1 = \begin{cases}
-		      -n , & i = 0 \\
-		      n ,  & i = n \\
-		      0 = i \neq 0,n
-	      \end{cases}$
-	\item Symmetry \begin{equation*}
-		      B_{i}^{n}(t) = C_{n-i}^{n}(1-t)^{n-i}t^{i} = B_{n-i}^{n}(1-t)
-	      \end{equation*}
-	\item Derivative \begin{equation*}
-		      \frac{d B_{i}^{n}(t)}{dt} = n\left[B_{i-1}^{n-1}(t)-B_{i}^{n-1}(t)\right]
-	      \end{equation*}
-	\item Recursion \begin{equation*}
-		      B_{i}^{n}(t) = (1-t)B_{i}^{n-1}(t)+tB_{i-1}^{n-1}(t)
-	      \end{equation*}
-	\item The Maxium : The max of \begin{equation*}
-		      B_{i}^{n}(t) is B_{\lfloor n/2 \rfloor}^{n}(t)
-	      \end{equation*}
+		      \end{cases}$
+		\item Symmetry \begin{equation*}
+			      B_{i}^{n}(t) = C_{n-i}^{n}(1-t)^{n-i}t^{i} = B_{n-i}^{n}(1-t)
+		      \end{equation*}
+		\item Derivative \begin{equation*}
+			      \frac{d B_{i}^{n}(t)}{dt} = n\left[B_{i-1}^{n-1}(t)-B_{i}^{n-1}(t)\right]
+		      \end{equation*}
+		\item Recursion \begin{equation*}
+			      B_{i}^{n}(t) = (1-t)B_{i}^{n-1}(t)+tB_{i-1}^{n-1}(t)
+		      \end{equation*}
+		\item The Maxium : The max of \begin{equation*}
+			      B_{i}^{n}(t) is B_{\lfloor n/2 \rfloor}^{n}(t)
+		      \end{equation*}
 
-	\item elevation \begin{equation*}
-		      B_{i}^{n}(t) = {(1 -\frac{i}{n+1}})B_{i}^{n+1}(t)+\frac{i+1}{n+1}B_{i-1}^{n+1}(t)
-	      \end{equation*}
-	\item partion formula:\begin{equation*}
-		      B_{i}^{n}(ct) = \sum_{n}^{j}B_{i}^{j}B_{j}^{n}(t)
-	      \end{equation*}
+		\item elevation \begin{equation*}
+			      B_{i}^{n}(t) = {(1 -\frac{i}{n+1}})B_{i}^{n+1}(t)+\frac{i+1}{n+1}B_{i-1}^{n+1}(t)
+		      \end{equation*}
+		\item partion formula:\begin{equation*}
+			      B_{i}^{n}(ct) = \sum_{n}^{j}B_{i}^{j}B_{j}^{n}(t)
+		      \end{equation*}
 
-	\item integral formula:\begin{equation*}
-		      \int_{0}^{1}B_{i}^{n}(t)dt = \frac{1}{n+1}
-	      \end{equation*}
-	\item conversion formula with power basis:\begin{equation*}
-		      t^j = \sum_{i=j}^{n}\frac{C_{n-j}^{i-j}}{C_{n}^{i}}B_{i}^{n}(t)
-	      \end{equation*}
-	\item Recursion formula:\begin{equation*}
-		      P_n(t) = P_n(b_0,b_1,...,b_n;t) = (1-t)P_{n-1}(b_0,b_1,...,b_{n-1};t)+tP_{n-1}(b_1,b_2,...,b_n;t)
-	      \end{equation*}
-	\item end point char:\begin{equation*}
-		      P_n(0) = b_0,P_n(1) = b_n
-	      \end{equation*}
+		\item integral formula:\begin{equation*}
+			      \int_{0}^{1}B_{i}^{n}(t)dt = \frac{1}{n+1}
+		      \end{equation*}
+		\item conversion formula with power basis:\begin{equation*}
+			      t^j = \sum_{i=j}^{n}\frac{C_{n-j}^{i-j}}{C_{n}^{i}}B_{i}^{n}(t)
+		      \end{equation*}
+		\item Recursion formula:\begin{equation*}
+			      P_n(t) = P_n(b_0,b_1,...,b_n;t) = (1-t)P_{n-1}(b_0,b_1,...,b_{n-1};t)+tP_{n-1}(b_1,b_2,...,b_n;t)
+		      \end{equation*}
+		\item end point char:\begin{equation*}
+			      P_n(0) = b_0,P_n(1) = b_n
+		      \end{equation*}
+		\item the Bezier curve will not extend outside the boundary of the convex polygon formed by its control points.
+		\item Geometric Invaiance: The Bezier curve is invariant under affine transformation.
+
+	\end{enumerate}
+\end{property}
+
+\begin{definition}[de Casteljau's algorithm]
+	\begin{equation*}
+		\begin{cases}
+			 & P_{t}^{0}(t_{0}) = b_{i},i = 0,1,...,n               \\
+			 & P_{i}^{j}(t) = (1-t)P_{i}^{j-1}(t)+tP_{i+1}^{j-1}(t)
+		\end{cases}
+	\end{equation*}
+	\label{def:de_casteljau_s_algorithm}
+	\begin{remark}
+		In the end,we can get $P_{0}^{n}(t)$ and that $P_{0}^{n}(t)$ is $P_{n}^{}(t_{0}^{})$. And The original curves is divided into two curves. The two curves are the same as the original curve.$P_{n}(P_{0}^{0}(t),P_{0}^{1}(t),\cdots,P_{0}^{n}(t_{0}^{});t)$ and $P_{n}(P_{0}^{n}(t_{0}),P_{1}^{n-1}(t_{0}),\cdots,P_{n}^{0}(t_0);t)$
+	\end{remark}
+
+\end{definition}
+
+\subsection{Bezier Curves other forms}
+
+Representing Bezier curve using edge vectors:
+\begin{definition}
+	We know The \[
+		\,
+		P_{n}(t) = \sum\limits_{i=0}^{n}B_{i}^{n}(t)b_{i},0\leq t \leq 1
+	\]
+	let \[
+		a_{0} = b_{0},a_{i} = b_{i}-b_{i-1},i = 1,2,...,n
+	\]
+	we have \[
+		P_{n} = \sum\limits_{i=0}^{n}f_{i,n}(t)a_{i},0\leq t \leq 1.
+	\]
+	where
+	\begin{equation*}
+		\begin{cases}
+			 & f_{0,n}(t) = 1                                                                                           \\
+			 & f_{i,n}(t) = 1 - \sum\limits_{j=0}^{i-1}B_{j}^{n}(t)\,or\, f_{i,n}(t)= \sum\limits_{j=i}^{n}B_{j}^{n}(t)
+		\end{cases}
+	\end{equation*}
+	\label{def:bezier_curve_using_edge_vectors}
+\end{definition}
+\newpage
+The same as we can conclude that Bezier curves's Derivative.\\
+Assume that \[
+	P_{n}(t) = \sum\limits_{i=0}^{n}B_{i}^{n}(t)b_{i}
+\]
+we can detive
+\begin{enumerate}
+	\item $\frac{dP_{n}(t)}{dt} = n P_{n-1}(\Delta b_{0},\Delta b_{1},...,\Delta b_{n-1};t)$
+	\item $\frac{d^2P_{n}(t)}{dt^2} = n(n-1) P_{n-2}(\Delta^2 b_{0},\Delta^2 b_{1},...,\Delta^2 b_{n-2};t)$
+	\item $\frac{d^kP_{n}(t)}{dt^k} = \frac{n!}{(n-k)!}P_{n-k}(\Delta^k b_{0},\Delta^k b_{1},\dots,\Delta^k b_{n-2};t)$
 \end{enumerate}
+
+\begin{remark}
+	\begin{enumerate}
+		\item $\dot{P_{n}}(0) = n\Delta b_{0},\dot{P_{n}(1) = n\Delta b_{n-1}}$\begin{proof}
+			      Proof of $\dot{P_{n}}(0) = n\Delta b_{0}$:
+			      \begin{equation*}
+				      \begin{aligned}
+					      \dot{P_{n}}(0) & = n\sum\limits_{i=0}^{n-1}B_{i}^{n-1}(0)\Delta b_{i} = \left. \sum\limits_{i=0}^{n-1}\binom{n-1}{i}t_{}^{i}(1-t)_{}^{n-i-1} \right|_{t=0}\Delta b_{i} \\
+					                     & = n\Delta b_{0}
+				      \end{aligned}
+			      \end{equation*}
+			      Proof of $\dot{P_{n}}(1) = n\Delta b_{n-1}$:
+			      \begin{equation*}
+				      \begin{aligned}
+					      \dot{P_{n}}(1) & = n\sum\limits_{i=0}^{n-1}B_{i}^{n-1}(1)\Delta b_{i} = \left. \sum\limits_{i=0}^{n-1}\binom{n-1}{i}t_{}^{i}(1-t)_{}^{n-i-1} \right|_{t=1} \Delta b_i \\
+					                     & = n\Delta b_{n-1}
+				      \end{aligned}
+			      \end{equation*}
+		      \end{proof}
+
+		\item In which that :$\Delta b_{i} = b_{i+1}-b_{i}$,$\Delta^k b_{i} = \Delta^{k-1}b_{i+1}-\Delta^{k-1}b_{i} $
+	\end{enumerate}
+\end{remark}
