@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1696056420 "CAGD.xdv" "CAGD.pdf" "CAGD" 1696056421 0
-  "CAGD.xdv" 1696056420 45928 0e140f8198df1782e0e0ebbe62f66a0c "xelatex"
+["xdvipdfmx"] 1697127114 "CAGD.xdv" "CAGD.pdf" "CAGD" 1697127114 0
+  "CAGD.xdv" 1697127114 45948 4dc94017f865b1c490476254d366fefb "xelatex"
   (generated)
   "CAGD.pdf"
   (rewritten before read)
-["xelatex"] 1696056420 "CAGD.tex" "CAGD.xdv" "CAGD" 1696056421 0
+["xelatex"] 1697127113 "CAGD.tex" "CAGD.xdv" "CAGD" 1697127114 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1689853683 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1689853683 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -214,11 +214,11 @@
   "/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty" 1689853683 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1694778403 9219900 132e8ee01c94cef4531f6fcb9aed691a ""
-  "CAGD.aux" 1696056420 1553 b4978d50bd2652202e694987f93fcd53 "xelatex"
-  "CAGD.out" 1696056420 737 bac1a5e97e5fad0e918323b92fa03c27 "xelatex"
-  "CAGD.tex" 1696056249 1435 17c53e63b43aafabd937cb7d606d7255 ""
-  "CAGD.toc" 1696056420 426 5ac057fc85931ceccf4d107243076819 "xelatex"
-  "chapeter/chapeter1.tex" 1696056419 6776 e48ff7977757a7f52cffb21097acca78 ""
+  "CAGD.aux" 1697127114 1553 b4978d50bd2652202e694987f93fcd53 "xelatex"
+  "CAGD.out" 1697127114 737 bac1a5e97e5fad0e918323b92fa03c27 "xelatex"
+  "CAGD.tex" 1696060965 1435 17c53e63b43aafabd937cb7d606d7255 ""
+  "CAGD.toc" 1697127114 426 5ac057fc85931ceccf4d107243076819 "xelatex"
+  "chapeter/chapeter1.tex" 1696506384 6778 2ee79d842dc0f30c2fcc86c8ecf7b50e ""
   (generated)
   "CAGD.aux"
   "CAGD.log"
