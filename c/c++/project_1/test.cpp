@@ -1,23 +1,20 @@
 #include <iostream>
-#include <string>
+using namespace std;
+
+void hanoi(int n, char A, char B, char C) {
+    if(n == 1) {
+        cout << "Move disk 1 from " << A << " to " << C << endl;
+    } else {
+        hanoi(n - 1, A, C, B);
+        cout << "Move disk " << n << " from " << A << " to " << C << endl;
+        hanoi(n - 1, B, A, C);
+    }
+}
 
 int main() {
-  std::cout << "Please enter your first name ";
-  std::string name;
-  std::cin >> name;
-
-  const std::string greeting = "Hello, " + name + "!";
-
-  const std::string spaces(greeting.size(), ' ');
-  const std::string second = "*" + spaces + "*";
-
-  const std::string first(second.size(), '*');
-
-  std::cout << std::endl;
-  std::cout << first << std::endl;
-  std::cout << "* " << greeting << "*" << std::endl;
-  std::cout << second << std::endl;
-  std::cout << first << std::endl;
-
-  return 0;
+    int disks;
+    cout << "Enter the number of disks: ";
+    cin >> disks;
+    hanoi(disks, 'A', 'B', 'C');
+    return 0;
 }
