@@ -2,7 +2,7 @@
 #include <limits>
 
 using namespace std;
-
+extern void main3();
 // Class Scope
 /* class Myclass { */
 /* public: */
@@ -33,4 +33,8 @@ int main() {
 
   /* cout << "Class Scope:" << Myclass::class_var << endl; */
   /* return 0; */
+  /* main1(); */
+  /* main2(); */
+  main3();
+  return 0;
 }
