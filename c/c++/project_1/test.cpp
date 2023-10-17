@@ -1,20 +1,36 @@
 #include <iostream>
+#include <limits>
+
 using namespace std;
 
-void hanoi(int n, char A, char B, char C) {
-    if(n == 1) {
-        cout << "Move disk 1 from " << A << " to " << C << endl;
-    } else {
-        hanoi(n - 1, A, C, B);
-        cout << "Move disk " << n << " from " << A << " to " << C << endl;
-        hanoi(n - 1, B, A, C);
-    }
-}
+// Class Scope
+/* class Myclass { */
+/* public: */
+/*   static int class_var; */
+/* }; */
+
+/* int Myclass::class_var = 30; */
 
 int main() {
-    int disks;
-    cout << "Enter the number of disks: ";
-    cin >> disks;
-    hanoi(disks, 'A', 'B', 'C');
-    return 0;
+  /*NOTE:enum class example:
+   * enum color { red, green, blue } c; */
+  /* c = blue; */
+  /* cout << c << endl; */
+
+  /*NOTE: Type exchange example
+   * int i = 10; */
+  /* float f = static_cast<float>(i); */
+  /* cout << f << endl; */
+
+  /* NOTE: The Scope in C++ *
+   * int a = 10; */
+  /* { */
+  /*   int a = 20; */
+  /*   cout << "internal a:" << a << endl; */
+  /* } */
+  /* cout << "external a:" << a << endl; */
+  /* return 0; */
+
+  /* cout << "Class Scope:" << Myclass::class_var << endl; */
+  /* return 0; */
 }
