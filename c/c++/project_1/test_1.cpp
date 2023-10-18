@@ -2,7 +2,7 @@
 #include <limits>
 
 using namespace std;
-extern void main3();
+extern void main6();
 // Class Scope
 /* class Myclass { */
 /* public: */
@@ -35,6 +35,6 @@ int main() {
   /* return 0; */
   /* main1(); */
   /* main2(); */
-  main3();
+  main6();
   return 0;
 }
