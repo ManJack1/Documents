@@ -58,7 +58,7 @@ hold on;
 if isreal(root)==1
    plot(root,y,'r+','LineWidth',2);
 else
-  plot(root,'r+','LineWidth',2);  
+  plot(root,'r+','LineWidth',2);
 end
 legend('�Ŷ�ǰ�Ľ�','�Ŷ���Ľ�',0);
 hold off;
@@ -88,7 +88,7 @@ for i=1:3
    s0=['\t%2.',N,'f\t'];
   for u=1:n
      for v=1:n
-        fprintf(s0,A(u,v));  
+        fprintf(s0,A(u,v));
      end
         fprintf('\n');
   end
@@ -140,7 +140,7 @@ for i=1:length(xt)
     yt(i)=c(n);
     for k=1:n-1
         yt(i)=yt(i)*(xt(i)-x(n-k))+c(n-k);
-    end  
+    end
 end
 function sancispli1
 x=[-2.9405,-2.6003,-2.2462,-1.4674,-0.8610,0.0101,0.3605,0.5078,1.0798,1.3923,1.7162,2.9099];
@@ -185,7 +185,7 @@ for i=1:LN
             Std1(i)=ytjsd1(x(j),x(j+1),y(j),y(j+1),M(j),M(j+1),t(i));
             Std2(i)=ytjsd2(x(j),x(j+1),M(j),M(j+1),t(i));
             break;
-        else 
+        else
             jk=jk+1;
         end
     end
@@ -241,4 +241,3 @@ ds=-M1*(x2-t).^2/(2*h)+M2*(t-x1).^2/(2*h)-(y1-M1*h^2/6)/h+...
 function d2s=ytjsd2(x1,x2,M1,M2,t)
 h=x2-x1;
 d2s=M1*(x2-t)/h+M2*(t-x1)/h;
-
