@@ -1027,6 +1027,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/thmbox/thmbox.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/thmbox/thmbox.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/thmbox/thmbox.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT ./CAGD.aux
 INPUT CAGD.aux
 INPUT CAGD.aux
@@ -1136,10 +1137,10 @@ INPUT ./CAGD.toc
 INPUT CAGD.toc
 INPUT CAGD.toc
 OUTPUT CAGD.toc
-INPUT ./chapeter/chapeter1.tex
-INPUT chapeter/chapeter1.tex
-INPUT ./chapeter/chapeter1.tex
-INPUT chapeter/chapeter1.tex
+INPUT ./chapeter/chapter1.tex
+INPUT chapeter/chapter1.tex
+INPUT ./chapeter/chapter1.tex
+INPUT chapeter/chapter1.tex
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
@@ -1160,6 +1161,13 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT ./chapeter/chapter2.tex
+INPUT chapeter/chapter2.tex
+INPUT ./chapeter/chapter2.tex
+INPUT chapeter/chapter2.tex
+INPUT /Users/luoyaohui/Desktop/Documents/tex/CAGD/img/1.png
+INPUT /Users/luoyaohui/Desktop/Documents/tex/CAGD/img/1.png
+INPUT /Users/luoyaohui/Desktop/Documents/tex/CAGD/img/1.png
 INPUT CAGD.aux
 INPUT ./CAGD.out
 INPUT ./CAGD.out

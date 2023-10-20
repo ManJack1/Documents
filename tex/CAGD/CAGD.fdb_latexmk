@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1697440877 "CAGD.xdv" "CAGD.pdf" "CAGD" 1697440878
-  "CAGD.xdv" 1697440872 47356 d777d2a0d4a9d8debfdc49137850a8e1 "xelatex"
+["xdvipdfmx"] 1697766286 "CAGD.xdv" "CAGD.pdf" "CAGD" 1697766286
+  "CAGD.xdv" 1697766286 73808 881aea63dc9eb51c044e56f70017a2a5 "xelatex"
   (generated)
   "CAGD.pdf"
-["xelatex"] 1697440871 "CAGD.tex" "CAGD.xdv" "CAGD" 1697440878
+["xelatex"] 1697766285 "CAGD.tex" "CAGD.xdv" "CAGD" 1697766286
   "/System/Library/Fonts/Menlo.ttc" 1666096581 2156036 ec05dfca6821d85440da0899493002c3 ""
   "/System/Library/Fonts/PingFang.ttc" 1666096581 77157916 fd717c79561557f159c9f289f92fb545 ""
   "/Users/luoyaohui/Library/texmf/tex/latex/annotate-equations.sty" 1689497978 7931 3f8fd8b28284fbc7084723a90fd9b5a9 ""
@@ -217,11 +217,13 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1668607751 5419919 d0bddf5c9b86b639c9d2c5ad903b8a5a ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "CAGD.aux" 1697440872 1685 7d8f1f20772718102e6458c836d4d1ec "xelatex"
-  "CAGD.out" 1697440872 737 bac1a5e97e5fad0e918323b92fa03c27 "xelatex"
-  "CAGD.tex" 1695969086 1435 17c53e63b43aafabd937cb7d606d7255 ""
-  "CAGD.toc" 1697440872 426 5ac057fc85931ceccf4d107243076819 "xelatex"
-  "chapeter/chapeter1.tex" 1697440869 7113 930d5d15467431df06009e2c25d9cb65 ""
+  "CAGD.aux" 1697766286 3072 29d97002c227059f8f1b5c502a2299ed "xelatex"
+  "CAGD.out" 1697766286 2243 bf8c80c73d2bf1d1ee482dd8fdbe5513 "xelatex"
+  "CAGD.tex" 1697762935 1486 4ba9580fbc8e59bc9a32de4a6e538387 ""
+  "CAGD.toc" 1697766286 1210 923a1fc5ea14e2df9d077b3f9239c342 "xelatex"
+  "chapeter/chapter1.tex" 1697699006 6772 649565d1bcf4de7a0b63dd47c7dfe7fe ""
+  "chapeter/chapter2.tex" 1697766285 1964 813b381407f0e17438116efe31fa045b ""
+  "img/1.png" 1697762820 83506 19993356ee0b49f50a5534c187a75666 ""
   (generated)
   "CAGD.aux"
   "CAGD.log"

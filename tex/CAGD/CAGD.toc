@@ -3,3 +3,12 @@
 \contentsline {section}{\numberline {1.2}Bezier Curves }{1}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Bezier Curves definition}{1}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Bezier Curves other forms}{3}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}B spline curse}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}B Spline History}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}B Spline curve' definition and its properties}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}de Boor alorgithm}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}The deviation of B spline curve}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}B spline curse and it's deviation}{5}{section.2.5}%
+\contentsline {section}{\numberline {2.6}B spline and Bezier curve}{5}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}de Rham alorgithm}{6}{subsection.2.6.1}%
+\contentsline {subsubsection}{de Rham Curce Continuity}{6}{subsubsection*.2}%
