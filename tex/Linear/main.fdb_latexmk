@@ -1,10 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1697128360 "main.xdv" "main.pdf" "main" 1697128360 0
-  "main.xdv" 1697128360 112904 084eb6c13cf11544ffeb355c26cf47fa "xelatex"
+["xdvipdfmx"] 1697788398 "main.xdv" "main.pdf" "main" 1697788398 0
+  "main.xdv" 1697788398 112904 8d89a08f22b961844518751b0309ff66 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1697128359 "main.tex" "main.xdv" "main" 1697128360 0
+["xelatex"] 1697788397 "main.tex" "main.xdv" "main" 1697788398 0
+  "/home/ManJack/texmf/tex/latex/annotate-equations.sty" 1683355556 7931 3f8fd8b28284fbc7084723a90fd9b5a9 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1689853683 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1689853683 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -138,7 +139,6 @@
   "/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty" 1689853683 88393 1adf6fa3f245270d06e3d4f8910f7fc5 ""
   "/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty" 1689853683 4474 f04cd1cc7bd76eb033e6fb12eb6a0d77 ""
   "/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty" 1689853683 2444 70065bddd85997dc1fd0bb7ae634e5fa ""
-  "/usr/share/texmf-dist/tex/latex/annotate-equations/annotate-equations.sty" 1689853683 7556 a6550ba1dd91ce88938ccea65ac63169 ""
   "/usr/share/texmf-dist/tex/latex/atveryend/atveryend.sty" 1689853683 19336 ce7ae9438967282886b3b036cfad1e4d ""
   "/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty" 1689853683 3935 57aa3c3e203a5c2effb4d2bd2efbc323 ""
   "/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty" 1689853683 3052 30236f0cc243a8651b82240dfd2e8b9d ""
@@ -214,12 +214,12 @@
   "/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.sty" 1689853683 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty" 1689853683 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1694778403 9219900 132e8ee01c94cef4531f6fcb9aed691a ""
-  "chapter/chapter1.tex" 1696515379 13318 dbfdd19de847e64f6fdac6a86b077d4a ""
-  "main.aux" 1697128360 3165 581998401fcd1efca36a974913f97b30 "xelatex"
-  "main.out" 1697128360 1026 8551c4cdae98f303d5154fd33a35e3ec "xelatex"
-  "main.tex" 1696766891 1998 d0d9a07aad9c2821a45d7d9da943c34b ""
-  "main.toc" 1697128360 630 12a34baacf544435d88cf2719953f684 "xelatex"
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1697652768 9220568 54c359b8fb5ec40a2af3009d5086ea67 ""
+  "chapter/chapter1.tex" 1697692480 13318 dbfdd19de847e64f6fdac6a86b077d4a ""
+  "main.aux" 1697788398 3165 581998401fcd1efca36a974913f97b30 "xelatex"
+  "main.out" 1697788398 1026 8551c4cdae98f303d5154fd33a35e3ec "xelatex"
+  "main.tex" 1697692480 1998 d0d9a07aad9c2821a45d7d9da943c34b ""
+  "main.toc" 1697788398 630 12a34baacf544435d88cf2719953f684 "xelatex"
   (generated)
   "main.aux"
   "main.log"
