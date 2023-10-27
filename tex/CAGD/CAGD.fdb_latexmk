@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1697769842 "CAGD.xdv" "CAGD.pdf" "CAGD" 1697769842 0
-  "CAGD.xdv" 1697769841 74612 ee96102311576be17a5d356fa57a3e00 "xelatex"
+["xdvipdfmx"] 1697892178 "CAGD.xdv" "CAGD.pdf" "CAGD" 1697892178 0
+  "CAGD.xdv" 1697892178 74612 fa0940c35a09ca2adf72bca343d9f5e6 "xelatex"
   (generated)
   "CAGD.pdf"
   (rewritten before read)
-["xelatex"] 1697769841 "CAGD.tex" "CAGD.xdv" "CAGD" 1697769842 0
+["xelatex"] 1697892177 "CAGD.tex" "CAGD.xdv" "CAGD" 1697892178 0
   "/home/ManJack/texmf/tex/latex/annotate-equations.sty" 1683355556 7931 3f8fd8b28284fbc7084723a90fd9b5a9 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1689853683 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -213,11 +213,11 @@
   "/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJK.sty" 1689853683 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "/usr/share/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty" 1689853683 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1697652768 9220568 54c359b8fb5ec40a2af3009d5086ea67 ""
-  "CAGD.aux" 1697769841 3036 8a02e258a1acd047b9fb778c096280ff "xelatex"
-  "CAGD.out" 1697769841 2243 bf8c80c73d2bf1d1ee482dd8fdbe5513 "xelatex"
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1697881450 9219901 850d2811fdc9be9ccd218a279d0c634e ""
+  "CAGD.aux" 1697892178 3036 8a02e258a1acd047b9fb778c096280ff "xelatex"
+  "CAGD.out" 1697892178 2243 bf8c80c73d2bf1d1ee482dd8fdbe5513 "xelatex"
   "CAGD.tex" 1697769284 1486 4ba9580fbc8e59bc9a32de4a6e538387 ""
-  "CAGD.toc" 1697769841 1210 923a1fc5ea14e2df9d077b3f9239c342 "xelatex"
+  "CAGD.toc" 1697892178 1210 923a1fc5ea14e2df9d077b3f9239c342 "xelatex"
   "chapeter/chapter1.tex" 1697769284 7028 35842d21532a1e54850278e33a44ad12 ""
   "chapeter/chapter2.tex" 1697769839 1936 bf691917675ffef46036ff525866f579 ""
   "img/1.png" 1697769284 83506 19993356ee0b49f50a5534c187a75666 ""
