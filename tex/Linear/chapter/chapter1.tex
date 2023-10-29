@@ -19,8 +19,7 @@
 	\begin{enumerate}
 		\item R是一个加群
 		\item R对一个乘法来说是一个半群(半群是一个群胚+结合律)
-		\item 在集合R上，乘法对加法满足分配率a(b+c)=(ab+ac)
-	\end{enumerate}
+		\item 在集合R上，乘法对加法满足分配率a(b+c)=(ab+ac) \end{enumerate}
 \end{definition}
 
 \subsection{交换元、单位元、零因子、整环}
@@ -146,10 +145,10 @@ Suppose F is a field,We consider the problem of finding n scalars(element of F)$
 
 \begin{equation}
 	\begin{aligned}
-		A_{11}+A_{12}x_1+\cdots+A_{1n}x_n & = 0             \\
-		A_{21}+A_{22}x_1+\cdots+A_{2n}x_n & = 0             \\
-		                                  & \,\,\,\, \vdots \\
-		A_{m1}+A_{m2}x_1+\cdots+A_{mn}x_n & = 0
+		A_{11} + A_{12} x_1 + \cdots + A_{1n} x_n & = 0             \\
+		A_{21} + A_{22} x_1 + \cdots + A_{2n} x_n & = 0             \\
+		                                          & \,\,\,\, \vdots \\
+		A_{m1} + A_{m2} x_1 + \cdots + A_{mn} x_n & = 0
 	\end{aligned}
 	\label{eq:system_of_linear_equations}
 \end{equation}
@@ -288,7 +287,6 @@ One can describe e in the three cases as follows:
 	\end{equation}
 \end{proof}
 
-
 \begin{definition}
 	An $m \times n$ matrix R is called row-reduced if:
 	\begin{enumerate}
@@ -345,6 +343,135 @@ One can describe e in the three cases as follows:
 \begin{proof}
 
 \end{proof}
-
 %TODO:page 13
+
+
+
+\begin{theorem}
+	If A is an $n \times n$ matrix,then A is row-equivalent to the identity matrix if and only if and oly if the system of equations AX = 0 hase only he trivial solution.
+	\label{thm:row_equivalent_to_identity_matrix}
+\end{theorem}
+
+\begin{proof}
+	If a is row-equivalent to I. then AX = 0 and IX=0 have the same solutions.
+	We assume that AX = 0 has only the trivial solution X = 0. Let R be an $n \times n$
+	row-reduced echelon matrix  which is equivalent to A,and let r be the number of non-zero rows of R.Then RX = 0 has no non-trivial solution. Thus $r \geq r$.But R only has n rows.So certainly $r \leq n$, and we hav r = n. Since this means that R acturally has a leading non-zero entry of 1 in each of it n rows, and since these 1's occur each in a different one of the n columns,R must be the $n \times n$ identity matrix
+\end{proof}
+
+
+\subsection{Matrix Multiplication}
+
+\begin{definition}
+	Let A be an $m \times n$ matrix ove the field F and let B be an $n \times p$ matrix over F.The \textbf{Product} AB is the $m \times p$ matrix C whose i,j entry is
+	\begin{displaymath}
+		C_{ij} = \sum\limits_{r = 1}^{n}A_{ir}B_{rj}.
+	\end{displaymath}
+
+\end{definition}
+
+\begin{remark}
+	Acrossing this definition,we can draw two conclusions of calculating the product of two matrix AB:
+	The first:\\
+	We calculate the product of two matrix by the following row-operations:
+	In randon j entry of i row in A and  j row in B,we multiply corrspoondently them and add them up. And we can get the i row of C.
+	we can proof that why can get the conclusion.
+	\begin{proof}
+		we know the i row of C:\[
+			\begin{aligned}[]
+				\sum\limits_{j}^{}C_{ij} & = \sum\limits_{j}^{}\sum\limits_{r}^{}A_{ir}B_{rj}                                                                                         \\
+				                         & =\sum\limits_{j}^{}(A_{i1}B_{1j}+\dots+A_{ir}B_{rj}+\dots+A_{in}B_{nj})                                                                    \\
+				                         & = \begin{bmatrix}
+					                             A_{i1}B_{11}\, +\, \dots\, +\, & A_{ir}B_{r1} +     & \dots +     & A_{in}B_{n1} \\
+					                             \vdots                         & \vdots             & \vdots      & \vdots       \\
+					                             A_{i1}B_{1m}\, +\, \dots\, +\, & A_{ir}B_{rm}\, +\, & \dots\, +\, & A_{in}B_{nm}
+				                             \end{bmatrix}                                                         \\
+				                         & = \eqnmarkbox[red]{SUMb}{A_{i1}\sum\limits_{j}^{}B_{1j} + \dots + A_{ir}\sum\limits_{j}^{}B_{rj} + \dots + A_{in}\sum\limits_{j}^{}B_{nj}} \\
+				                         & = \sum\limits_{r}^{}\sum\limits_{j}^{}A_{ir}B_{rj}
+			\end{aligned}
+		\]
+		\annotate[yshift=0.5em]{below}{SUMb}{This means that j entry of i row in A and  j row in B.}
+	\end{proof}
+
+\end{remark}
+
+\begin{example}
+	Here are some products of matrices twith rational entries
+	\[
+		\begin{bmatrix}
+			5 & -1 & 2 \\
+			0 & 7  & 2
+		\end{bmatrix} = \begin{bmatrix}
+			1  & 0 \\
+			-3 & 1
+		\end{bmatrix} \begin{bmatrix} 5  & -1 & 2 \\
+                15 & 4  & 8
+		\end{bmatrix}
+	\]
+	Here:
+	\[
+		\begin{aligned}
+			\gamma_{1} & =(9\,\,12\,\, -8) = -2(0\,\,6\,\,1)+3(3\,\,8\,\,-2)    \\
+			\gamma_{2} & = (12\,\,62\,\,-3) = 5(0\,\,6\,\,1\,) +4(3\,\,8\,\,-2)
+		\end{aligned}
+	\]
+
+\end{example}
+
+\begin{theorem}
+	If A,B,C are matrices over the filed F such that the products BC and A(BC) are defined, then so are the products AB,(AB)C and \[
+		A(BC)=(AB)C
+	\]
+\end{theorem}
+
+
+\begin{proof}
+
+\end{proof}
+
+
+\begin{definition}
+
+	An \textbf{ $m \times n $} matrix is asaid to be an elementaty matrix if it can be obtained frome the $m \times m$ identity matrix by means of as single elementary row operation.
+
+\end{definition}
+
+\begin{theorem}
+	Let e be an elementary row operation and let E be the $m \times m$ elementary matrix E = e(I). Then,for every $m \times n$ matrix A, \[
+		e(A) = EA
+	\]
+\end{theorem}
+
+\begin{corollary}
+	Let A and B be $m \times n$ matrices over the filed F,Then B is row-equaivalent to A if and only if \\ B = PA,where P is a product of $m \times m$ elementary matrices
+\end{corollary}
+
+\section{Invertible Matrices}
+
+\begin{definition}
+	Let A be an $n \times n$ (square) matrix over the field F. An $n \times n$ matrix B such that BA = I is called let inverse of A;an $n \times n$ matrix B suc h that AB = I is called a right invers of A.If AB = BA = I,then B is called a two-side inverse of A and A is said to be invertible
+\end{definition}
+
+\begin{lemma}
+	If A has a left inverse B and a right inverse C, then B = C.
+	\begin{proof}
+		Suppose BA = I and AC = I.Then: \[
+			B = BI = B(AC) = (BA)C = IC = C
+		\]
+	\end{proof}
+\end{lemma}
+
+\begin{theorem}
+	Let A and B be $n \times n$ matrices over F.
+	\begin{enumerate}
+		\item If A is invertible, so is $A_{}^{-1}$ and $(A_{}^{-1})^{-1}$
+		\item If both A and  are invertible,so is AB,and $(AB)_{}^{-1}$ = $B_{}^{-1}A_{}^{-1}$
+
+	\end{enumerate}
+	\begin{proof}
+		The first statement is evident from the symmetry of the definition. The second follows upon verification of the relations.
+		\[
+			(AB)(B_{}^{-1}A_{}^{-1}) = (B_{}^{-1}A_{}^{-1})(AB) = I
+		\]
+	\end{proof}
+\end{theorem}
 

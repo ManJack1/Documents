@@ -11,4 +11,3 @@
 \contentsline {section}{\numberline {2.5}B spline curse and it's deviation}{5}{section.2.5}%
 \contentsline {section}{\numberline {2.6}B spline and Bezier curve}{5}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}de Rham alorgithm}{6}{subsection.2.6.1}%
-\contentsline {subsubsection}{de Rham Curce Continuity}{6}{subsubsection*.2}%
