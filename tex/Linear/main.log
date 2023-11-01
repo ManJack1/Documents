@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.16)  29 OCT 2023 15:58
-=======
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.10.19)  20 OCT 2023 15:53
->>>>>>> 4b47f3f41d924d77b67171fe7a37331de625f386
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.16)  1 NOV 2023 18:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -693,15 +689,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen306
 \Gm@layoutvoffset=\dimen307
 \Gm@dimlist=\toks40
-<<<<<<< HEAD
 ) (/Users/luoyaohui/Library/texmf/tex/latex/annotate-equations.sty
 Package: annotate-equations 2023/05/06 v0.2.2 easily annotate equations using TikZ
  (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifluatex.sty
-=======
-) (/home/ManJack/texmf/tex/latex/annotate-equations.sty
-Package: annotate-equations 2023/05/06 v0.2.2 easily annotate equations using TikZ
- (/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
->>>>>>> 4b47f3f41d924d77b67171fe7a37331de625f386
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 \c@eqnannotatenode=\count339
@@ -898,27 +888,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--208
 
  []
 
-[5] [6] [7] [8] [9]) [10] (./main.aux)
+[5] [6] [7] [8] [9] [10]) (./chapter/chapter2.tex [11]
+第二章
+) [12
+
+] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FC7B3475874E93B778FA270A633DDE93;1347.
+(rerunfilecheck)             Checksum: 2A226CF5181CD57A2B65BD4CC5C343AA;1582.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 30334 strings out of 476179
- 679159 string characters out of 5809543
- 990908 words of memory out of 5000000
- 50495 multiletter control sequences out of 15000+600000
+ 30340 strings out of 476179
+ 679272 string characters out of 5809543
+ 991177 words of memory out of 5000000
+ 50498 multiletter control sequences out of 15000+600000
  487189 words of font info for 146 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,18n,97p,569b,865s stack positions out of 10000i,1000n,20000p,200000b,200000s
-=======
- 30591 strings out of 478671
- 688189 string characters out of 5849165
- 1861018 words of memory out of 5000000
- 50131 multiletter control sequences out of 15000+600000
- 530169 words of font info for 144 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 89i,13n,97p,569b,817s stack positions out of 10000i,1000n,20000p,200000b,200000s
->>>>>>> 4b47f3f41d924d77b67171fe7a37331de625f386
 
-Output written on main.xdv (13 pages, 151124 bytes).
+Output written on main.xdv (15 pages, 176160 bytes).

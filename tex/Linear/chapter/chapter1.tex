@@ -145,10 +145,10 @@ Suppose F is a field,We consider the problem of finding n scalars(element of F)$
 
 \begin{equation}
 	\begin{aligned}
-		A_{11} + A_{12} x_1 + \cdots + A_{1n} x_n & = 0             \\
-		A_{21} + A_{22} x_1 + \cdots + A_{2n} x_n & = 0             \\
-		                                          & \,\,\,\, \vdots \\
-		A_{m1} + A_{m2} x_1 + \cdots + A_{mn} x_n & = 0
+		A_{11} x_1 + A_{12} x_2 + \cdots + A_{1n} x_n & = 0    \\
+		A_{21} x_1 + A_{22} x_2 + \cdots + A_{2n} x_n & = 0    \\
+		                                              & \vdots \\
+		A_{m1} x_1 + A_{m2} x_2 + \cdots + A_{mn} x_n & = 0
 	\end{aligned}
 	\label{eq:system_of_linear_equations}
 \end{equation}
@@ -474,4 +474,73 @@ One can describe e in the three cases as follows:
 		\]
 	\end{proof}
 \end{theorem}
+
+
+\begin{corollary}
+	A product of invertible matrices is ivertible.
+\end{corollary}
+
+\begin{theorem}[]
+	An elementary matrix is invertible.
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
+
+\begin{theorem}
+	If A is an $n \times n$ matrix, the fllowing are equivalent.
+	\begin{enumerate}
+		\item A is invertible.
+		\item A is row-equivalent to the $n \times n$ identity matrix.
+		\item A is a product of elementary matrices.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
+
+\begin{corollary}
+	If A is an invertible $n \times n$ matrix and if a sequence of elementary row operations reduces A to be identity, then thta same sequence of operations when applied to I yields $A^{-1}$
+
+\end{corollary}
+
+\begin{corollary}
+	Let A and B be $m \times n$ matrices.Then B is row-equivalent to A if and only if B = PA where P is an invertible $m \times m$ matrix
+\end{corollary}
+
+\begin{theorem}
+	\begin{enumerate}
+		\item A is invertible
+		\item The homogeneous system AX = 0 has only the trivial solution X = 0
+		\item The system of equations AX = Y has a solution X for each $n \times 1$ matrix Y.
+	\end{enumerate}
+\end{theorem}
+
+
+\begin{proof}
+
+\end{proof}
+
+
+\begin{corollary}
+	A square matrix with either a left or right inverse is invertible.
+\end{corollary}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{corollary}
+	Let $A = A_1A_2\cdots A_k$,where $A_1,\dots,A_k$ are $n \times n$ (square) matrices.Then A is invertible if and ovly if each $A_j$ is invertible.
+\end{corollary}
+
+\begin{proof}
+
+\end{proof}
+
+
 
