@@ -151,6 +151,7 @@ Suppose F is a field,We consider the problem of finding n scalars(element of F)$
 		A_{m1} x_1 + A_{m2} x_2 + \cdots + A_{mn} x_n & = 0
 	\end{aligned}
 	\label{eq:system_of_linear_equations}
+	%TODO:page 3
 \end{equation}
 where $y_1,y_2,\cdots,y_n$ and $A_{ij},1\leq i,j\leq n$ are given elements of F.
 We call \ref{eq:system_of_linear_equations} this a \textbf{system of m linear equations} in n unknowns.
@@ -160,8 +161,9 @@ we say that the system is \textbf{homogeneous},or that each of equations is homm
 \begin{definition}[\textbf{linear combination}]
 	For the \ref{eq:system_of_linear_equations},suppose we select m scalars $c_1,\cdots,c_m$,multiply the jth equation by $c_j$ and then add.
 	\begin{displaymath}
-		(c_1A_{11}+\cdots+c_mA_{m1})x_1+\cdots+(c_1A_{m1}+\cdots+c_mA_{mn})x_n = c_1y_1+\cdots+c_my_m
+		(c_1A_{11}+\cdots+c_mA_{m1})x_1+\cdots+(c_1A_{1n}+\cdots+c_mA_{mn})x_n = c_1y_1+\cdots+c_my_m
 	\end{displaymath}
+	%TODO:page4
 \end{definition}
 
 \begin{note}
@@ -179,10 +181,12 @@ we say that the system is \textbf{homogeneous},or that each of equations is homm
 		\end{aligned}
 		\label{eq:linear_equivalent}
 	\end{equation}
+	%TODO:page4
 \end{definition}
 
 \begin{theorem}
 	Equivalent system of linear equations have exactly the same solutions.
+	%TODO:page5
 \end{theorem}
 
 \section{Matrix and Elementary Row Operations}
@@ -203,6 +207,7 @@ where:
 	\end{bmatrix}
 	\annotate[yshift=-2.5em,xshift=0.5]{below}{linear-A}{A is the matrix of coefficient of the system}
 	\label{eq:A equals}
+	%TODO:page 6
 \end{equation}
 \\
 \begin{center}
@@ -258,6 +263,7 @@ One can describe e in the three cases as follows:
 	To each elementaty row opeatrion e there corrspoonds an elementaty row opeation $e_1$ , of the
 	same type as e,such that $e_1(e(A)) = e(e_1(A)) = A$. In other words, the inverse opeation  of an elementaty row operation is also an elementaty row operation of the same type.
 	\label{thm:elementary_row_operation_inverse}
+	%TODO:page 7
 \end{theorem}
 
 \begin{definition}
@@ -269,14 +275,16 @@ One can describe e in the three cases as follows:
 \end{remark}
 
 
-\begin{theorem}
-	If A and B are row-equivalent \(m \times n\) matrices over the field F,we say that B is row-equivalent to A if B can be obtained from A by a finite sequence of elementaty row operations.
+\begin{definition}
+	If A and B are row-equivalent \(m \times n\) matrices over the field F,we say that B \textbf{is row-equivalent to A} if B can be obtained from A by a finite sequence of elementaty row operations.
 	\label{thm:row_equivalent}
-\end{theorem}
+	%TODO:page 7
+\end{definition}
 
 
 \begin{theorem}
 	If A and B are row-equivalent \(m \times n\) matrices over the field F,then the system of linear equations AX = 0 is equivalent to the system of linear equations BX = 0.
+	%TODO:page 7
 \end{theorem}
 
 \begin{proof}
@@ -294,6 +302,7 @@ One can describe e in the three cases as follows:
 		\item each column of R which contains the leading non-zero entry of some row has all its other entries 0.
 	\end{enumerate}
 	\label{def:row_reduced_matrix}
+	%TODO:page 7
 \end{definition}
 \begin{remark}
 	The item 2 implies the num of row is more than the num of column.because if the num of row is less than the num of column,there must be a column which has no leading non-zero entry of some row,then the item 2 can't be satisfied.
@@ -338,6 +347,7 @@ One can describe e in the three cases as follows:
 
 \begin{theorem}
 	if A is an $n \times n$ matrix, then A is row-equivalent to the identity matrix if and only if the system of linear equations AX = 0 has only the trivial solution.
+	%TODO:: page 7
 \end{theorem}
 
 \begin{proof}
@@ -480,7 +490,7 @@ One can describe e in the three cases as follows:
 	A product of invertible matrices is ivertible.
 \end{corollary}
 
-\begin{theorem}[]
+\begin{theorem}
 	An elementary matrix is invertible.
 \end{theorem}
 
