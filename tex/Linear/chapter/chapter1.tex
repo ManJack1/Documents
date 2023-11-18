@@ -190,8 +190,8 @@ we say that the system is \textbf{homogeneous},or that each of equations is homm
 \end{theorem}
 
 \section{Matrix and Elementary Row Operations}
-there is no need to conttinue writing the 'unkonwns' $x_1,x_2,\cdots,x_n$ in the system of linear equations \ref{eq:system_of_linear_equations},
-since one actually compute onlu with the coefficient $A_{ij}$ and the scalars  $y_i$\\
+there is no need to continue writing the 'unkonwns' $x_1,x_2,\cdots,x_n$ in the system of linear equations \ref{eq:system_of_linear_equations},
+since one actually compute only with the coefficient $A_{ij}$ and the scalars  $y_i$\\
 We shall now abbreviate the system \ref{eq:system_of_linear_equations} by writing:
 \[
 	AX=Y
@@ -240,15 +240,15 @@ where:
 		      \ref{eq:AX=Y}
 	\end{enumerate}
 \end{remark}
-
+\begin{proposition}
 The elementary row operations on an $m \times n$ matrix A over the field F:
 \begin{enumerate}
 	\item multiply of one row of A by a none-zero scalar c;
 	\item interchange of two rows of A;
 	\item replacement of the rth row of A by row r plus c time row s,c any scalar and r $\neq$ s,
 \end{enumerate}
-
-An elementary row operation is thus a special type of function eith domain the set of all $m \times n$ matrices over F and range the same set.
+\end{proposition}
+An elementary row operation is thus a special type of function with domain the set of all $m \times n$ matrices over F and range the same set.
 One can describe e in the three cases as follows:
 \begin{enumerate}
 	\item $e(A)_{ij} = A_{ij} \quad if \quad  i \neq r ,e(A)_{rj} = cA_{rj}$
@@ -322,6 +322,11 @@ One can describe e in the three cases as follows:
 \begin{theorem}
 	Every $m \times n$ matrix over the field F is row-equivalent to a row-reduced matrix.
 \end{theorem}
+\begin{proof}
+  
+  Let A be an $m \times n$ matrix over F.If every entry in the first row of A is 0,then condition(a) is satified in so far as row is concerned.If row 1 has non-zero entry,let k be the smallest positive integer j for which $A_{1j} \neq 0$.Multiply row 1 by $A_{1k}^{-1}$,and then condition (a) is satisfied with regard to rwo 1.Now for each $i \geq 2$,add ($-A_{ik}^{}$) times row 1 to  row i,Now the leading non-zero entry of row 1 occurs in column k,that entry is 1,and every other entry in column.
+  
+\end{proof}
 
 \begin{definition}
 	An $m \times n$ matrix R is called a \textbf{row-reduced echelon matrix} if:
@@ -351,7 +356,7 @@ One can describe e in the three cases as follows:
 \end{theorem}
 
 \begin{proof}
-
+   If A is row-equivalent to I, then AX = 0 and IX = 0 has the same solution.Conversely,suppose AX = 0 has only the trivial solution X = 0.Let R be an $n \times n$ row-reduced echelon matrix which is row-equivalent to A,and let r be the number of non-zero rows of R.Then RX = 0 has no non-trivial solution.Thus $r \geq n$,but $r \leq n$.So r = n,We know R is \textbf{RREF},it has r non-zero rows.So R is the identity matrix.
 \end{proof}
 %TODO:page 13
 
@@ -435,7 +440,20 @@ One can describe e in the three cases as follows:
 
 
 \begin{proof}
-
+  To show that A(BC) = (AB)C means to show that \[
+    [A(BC)]_{ij} = [(AB)C]_{ij}
+  \]
+  for each i,j By definition \[
+    \begin{aligned}
+      [A(BC)]_{ij} &= \sum\limits_{r}^{}A_{ir}(BC)_{rj}\\
+                  &= \sum\limits_{r}^{}A_{ir}\sum\limits_{s}^{}B_{rs}C_{sj}\\
+                  &= \sum\limits_{r}^{}\sum\limits_{s}^{}A_{ir}B_{rs}C_{sj}\\
+                  &=\sum\limits_{s}^{}\sum\limits_{r}^{}A_{ir}B_{rs}C_{sj}\\
+                  &=\sum\limits_{s}^{}(\sum\limits_{r}^{}A_{ir}B_{rs})C_{sj}\\
+                  &= \sum\limits_{s}^{}(AB)_{is}C_{sj}
+                  &=[(AB)C]_{ij}
+    \end{aligned}
+  \]
 \end{proof}
 
 
@@ -541,7 +559,7 @@ One can describe e in the three cases as follows:
 \end{corollary}
 
 \begin{proof}
-
+ Let A be an  matrix.Suppose A has a left inverse,i.e,a matrix B such that BA = I.We know that A is row-equivalent to I,so A is invertible.Because X = IX = (BA)X = 0,so B is a right inverse of A.On the orther hand,Suppose A has a right inverse,i.e,a matrix C such that AC = I.We can know C is invertible,and $A = C^{-1}$.So A is invertible with inverse C
 \end{proof}
 
 \begin{corollary}

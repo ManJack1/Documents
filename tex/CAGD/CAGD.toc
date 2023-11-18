@@ -11,3 +11,4 @@
 \contentsline {section}{\numberline {2.5}B spline curse and it's deviation}{5}{section.2.5}%
 \contentsline {section}{\numberline {2.6}B spline and Bezier curve}{5}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}de Rham alorgithm}{6}{subsection.2.6.1}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}Bernsterin-Bezier三角形曲面片}{7}{chapter.3}%

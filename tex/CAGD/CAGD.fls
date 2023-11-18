@@ -1168,6 +1168,10 @@ INPUT chapeter/chapter2.tex
 INPUT ./img/1.png
 INPUT ./img/1.png
 INPUT img/1.png
+INPUT ./chapeter/chapter6.tex
+INPUT chapeter/chapter6.tex
+INPUT ./chapeter/chapter6.tex
+INPUT chapeter/chapter6.tex
 INPUT CAGD.aux
 INPUT ./CAGD.out
 INPUT ./CAGD.out

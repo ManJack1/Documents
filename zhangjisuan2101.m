@@ -241,3 +241,4 @@ disp('ʵ��2  ��Jacobi����Գƾ��������ֵ���
     function d2s=ytjsd2(x1,x2,M1,M2,t)
     h=x2-x1;
     d2s=M1*(x2-t)/h+M2*(t-x1)/h;
+
