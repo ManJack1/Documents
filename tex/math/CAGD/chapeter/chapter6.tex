@@ -1,0 +1,50 @@
+\newpage
+\chapter{Bernsterin-Bezier三角形曲面片}
+设T是参数uv-平面上的标准三角形，其顶点为:
+\[
+  V_1 = [1,0]^T,V_2 = [0,1]^T,V_3 = [0,0]^T
+\]
+
+uv-平面上任意u关于T的重心坐标为:(u,v,w),其中:
+\[
+  U = uV_1+vV_2+wV_3,u+v+w= 1
+\]
+\begin{remark}
+   We can know that :
+   \begin{enumerate}
+    \item The number of control point is $\frac{(n+1)(n+2)}{2}$
+    \item The degree of the curve is $n^2$
+   \end{enumerate}
+\end{remark}
+二元的Bernstein多项式的定义:
+\begin{definition}
+  Bernstein多项式定义为:
+  \[
+  \,B_{i,j,k}^{n}(u,v,w) = \frac{n!}{i!j!k!}u^{i}v^{j}w^{k},i+j+k=n,u+v+w=1
+  \]
+\end{definition}
+
+二元的Bernstein多项式的性质:
+\begin{enumerate}
+  \item 权性: $B_{i,j,k}^{n}(u,v,w) = 1$
+  \item 正性: $B_{i,j,k}^{n}(u,v,w) \geq 0$
+  \item 递推性: $B_{i,j,k}^{n}(u,v,w) = uB_{i-1,j,k}^{n-1}(u,v,w) + vB_{i,j-1,k}^{n-1}(u,v,w) + wB_{i,j,k-1}^{n-1}(u,v,w)$
+\end{enumerate}
+
+\begin{definition}
+  
+The n power of Triangular Bézier Surface Patcha's definition:
+\[
+  \mathcal{P}(u,v,w) = \sum_{i+j+k=n}B_{i,j,k}^{n}(u,v,w)P_{i,j,k}
+\]
+\end{definition} 
+
+\begin{remark}
+   \begin{enumerate}
+    \item The endpoint interpolation property of the triangular Bézier surface patch:\[
+      P(1,0,0) = P_{0,0,n},P(0,1,0) = P_{0,n,0},P(0,0,1) = P_{n,0,0}
+    \]
+  \item The edge of the triangular Bézier surface patch is a Bézier curve:
+  \item The triangular Bézier surface patch is a convex hull of the control point 
+\end{enumerate}
+\end{remark}
