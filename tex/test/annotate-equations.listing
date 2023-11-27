@@ -1,2 +1,0 @@
-    \renewcommand{\eqnannotationfont}{\sffamily\tiny}
-    \renewcommand{\eqnannotationstrut}{\strut}

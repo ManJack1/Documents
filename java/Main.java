@@ -1,17 +1,17 @@
+// 写一个斐多数列
 public class Main {
   public static void main(String[] args) {
-
-  public static int rank(int key, int[] a) {
-    int lo = 0;
-    int hi = a.length - 1;
-    while (lo <= hi) {
-      int mid = lo + (hi - lo) / 2;
-      if (key < a[mid]) {
-        hi = mid - 1;
-      } else if (key > a[mid]) {
-        lo = mid + 1;
-      } else {
-        return mid;
-      }
+    System.out.println("Hello World!");
+    int i = 0;
+    int j = 1;
+    int k = 0;
+    System.out.println(i);
+    System.out.println(j);
+    while (k < 100) {
+      k = i + j;
+      System.out.println(k);
+      i = j;
+      j = k;
     }
+  }
 }
