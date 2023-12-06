@@ -1,122 +1,142 @@
-local wezterm = require("wezterm")
-local selected_scheme = "Tokyo Night Storm"
-
-local scheme = wezterm.get_builtin_color_schemes()[selected_scheme]
-local C_ACTIVE_BG = scheme.selection_bg
-local C_ACTIVE_FG = scheme.ansi[6]
-local C_BG = scheme.background
-local C_HL_1 = scheme.ansi[5]
-local C_HL_2 = scheme.ansi[4]
-local C_INACTIVE_FG
-local bg = wezterm.color.parse(scheme.background)
-local h, s, l, a = bg:hsla()
-local act = wezterm.action
-if l > 0.5 then
-	C_INACTIVE_FG = bg:complement_ryb():darken(0.3)
-else
-	C_INACTIVE_FG = bg:complement_ryb():lighten(0.3)
-end
-
-scheme.tab_bar = {
-	background = C_BG,
-	new_tab = {
-		bg_color = C_BG,
-		fg_color = C_HL_2,
-	},
-	active_tab = {
-		bg_color = C_ACTIVE_BG,
-		fg_color = C_ACTIVE_FG,
-	},
-	inactive_tab = {
-		bg_color = C_BG,
-		fg_color = C_INACTIVE_FG,
-	},
-	inactive_tab_hover = {
-		bg_color = C_BG,
-		fg_color = C_INACTIVE_FG,
-	},
-}
-
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-	if tab.is_active then
-		return {
-			{ Foreground = { Color = C_HL_1 } },
-			{ Text = " " .. tab.tab_index + 1 },
-			{ Foreground = { Color = C_HL_2 } },
-			{ Text = ": " },
-			{ Foreground = { Color = C_ACTIVE_FG } },
-			{ Text = tab.active_pane.title .. " " },
-			{ Background = { Color = C_BG } },
-			{ Foreground = { Color = C_HL_1 } },
-			{ Text = "|" },
-		}
-	end
-	return {
-		{ Foreground = { Color = C_HL_1 } },
-		{ Text = " " .. tab.tab_index + 1 },
-		{ Foreground = { Color = C_HL_2 } },
-		{ Text = ": " },
-		{ Foreground = { Color = C_INACTIVE_FG } },
-		{ Text = tab.active_pane.title .. " " },
-		{ Foreground = { Color = C_HL_1 } },
-		{ Text = "|" },
-	}
-end)
-
 return {
-	color_schemes = {
-		[selected_scheme] = scheme,
-	},
-	color_scheme = selected_scheme,
-	tab_bar_at_bottom = true,
-	use_fancy_tab_bar = false,
-	window_decorations = "RESIZE",
-	-- window_background_opacity = 0.8,
-	font_size = 14.0,
-	font = wezterm.font("JetBrains Mono", { weight = "Regular" }),
-	font_rules = {
-		{
-			italic = true,
-			font = wezterm.font("VictorMono Nerd Font", { italic = true, weight = "Bold" }),
-		},
-		{
-			intensity = "Bold",
-			font = wezterm.font("FiraCode Nerd Font", { weight = "Bold" }),
-		},
-	},
-	---tmux term
-	term = "tmux-256color",
-	---keys mapping
-	keys = {
-		{ key = "w", mods = "ALT", action = wezterm.action({ SpawnTab = "DefaultDomain" }) },
-		{ key = ",", mods = "ALT", action = act.ActivateTabRelative(-1) },
-		{ key = ".", mods = "ALT", action = act.ActivateTabRelative(1) },
-		{ key = "v", mods = "ALT", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
-		{ key = "c", mods = "ALT", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
-		-- 设置快捷键以在窗格之间向左切换
-		{ key = "LeftArrow", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
+  -- "https://github.com/hrsh7th/nvim-cmp", requires = {
+  --   -- ... 其他依赖 ...
+  --   "hrsh7th/cmp-copilot",
+  -- },
+  -- config = function()
+  -- vim.api.nvim_set_hl(0, "mypmenu", { bg = "#bb9af7", fg = "#414868" })
+  -- vim.api.nvim_set_hl(0, "MyPmenuSel", { bg = "#bb9af7", fg = "#414868", bold = true, italic = true })
+  --   local cmp = require("cmp")
+  --   cmp.setup({
+  --     -- 指定自动完成源
+  --     sources = cmp.config.sources({
+  --       { name = "nvim_lsp" }, -- 从 LSP 获取自动完成建议
+  --       { name = "luasnip" }, -- LuaSnip 代码片段
+  --       { name = "buffer", keyword_length = 4 }, -- 从当前缓冲区中的文本提供建议
+  --       { name = "path" }, -- 文件路径自动完成
+  --       { name = "nvim_lua" }, -- Neovim Lua API
+  --       -- { name = "treesitter" }, -- Treesitter 语法分析器
+  --       { name = "copilot" }, -- GitHub Copilot
+  --     }),
+  --
+  --     -- UI 相关的设置
+  -- window = {
+  --   -- 完成建议菜单的外观设置
+  --   completion = {
+  --     border = "single", -- 边框样式，可选项有 'single', 'double', 'rounded', 'solid' 等
+  --     winhighlight = "Normal:Pmenu,CursorLine:MyPmenuSel,Search:None",
+  --   },
+  --   -- 文档预览窗口的外观设置
+  --   documentation = {
+  --     border = "rounded",
+  --   },
+  -- },
+  --
+  --     -- ... 其他设置 ...
+  --   })
+  --
+  --   -- 使用键位映射来增强操作体验
+  --   cmp.setup({
+  --     mapping = {
+  --       ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
+  --       ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
+  --       ["<C-y>"] = cmp.config.disable, -- 在插入模式下禁用 <C-y>
+  --       ["<C-e>"] = cmp.mapping({
+  --         i = cmp.mapping.abort(),
+  --         c = cmp.mapping.close(),
+  --       }),
+  --       ["<CR>"] = cmp.mapping.confirm({ select = true }),
+  --       -- ... 其他键位映射 ...
+  --     },
+  --     -- ... 其他设置 ...
+  --   })
+  -- end,
 
-		-- 设置快捷键以在窗格之间向右切换
-		{ key = "RightArrow", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = { { "hrsh7th/cmp-emoji" }, { "hrsh7th/cmp-nvim-lsp" }, { "hrsh7th/cmp-path" } },
 
-		-- 设置快捷键以在窗格之间向上切换
-		{ key = "UpArrow", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+    {
+      "hrsh7th/nvim-cmp",
+      dependencies = {
+        { "hrsh7th/cmp-nvim-lsp" },
+        { "hrsh7th/cmp-path" }, --optional
+      },
+      --   opts = {
+      --     sources = {
+      --       { name = "nvim_lsp" },
+      --       { name = "path" }, --optional
+      --       { name = "luasnip" }, -- LuaSnip 代码片段
+      --       { name = "buffer", keyword_length = 4 }, -- 从当前缓冲区中的文本提供建议
+      --       { name = "path" }, -- 文件路径自动完成
+      --       { name = "nvim_lua" }, -- Neovim Lua API
+      --       -- { name = "treesitter" }, -- Treesitter 语法分析器
+      --       { name = "copilot" }, -- GitHub Copilot
+      --     },
+      --   },
+      -- },
+      opts = function(_, opts)
+        local has_words_before = function()
+          unpack = unpack or table.unpack
+          local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+          return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+        end
 
-		-- 设置快捷键以在窗格之间向下切换
-		{ key = "DownArrow", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
-		-- 设置快捷键以关闭当前分屏窗格
-		{ key = "q", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
-		-- 调整分屏大小的快捷键
-		-- 增加当前窗格的宽度
-		{ key = "RightArrow", mods = "ALT|SHIFT", action = wezterm.action({ AdjustPaneSize = { "Right", 5 } }) },
+        local luasnip = require("luasnip")
+        local cmp = require("cmp")
 
-		-- 减少当前窗格的宽度
-		{ key = "LeftArrow", mods = "ALT|SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 5 } }) },
+        vim.api.nvim_set_hl(0, "mypmenu", { bg = "#bb9af7", fg = "#414868" })
+        vim.api.nvim_set_hl(0, "MyPmenuSel", { bg = "#bb9af7", fg = "#414868", bold = true, italic = true })
+        opts.mapping = vim.tbl_extend("force", opts.mapping, {
+          cmp.setup({
+            sources = cmp.config.sources({
+              { name = "nvim_lsp" }, -- 从 LSP 获取自动完成建议
+              { name = "luasnip" }, -- LuaSnip 代码片段
+              { name = "buffer", keyword_length = 4 }, -- 从当前缓冲区中的文本提供建议
+              { name = "path" }, -- 文件路径自动完成
+              { name = "nvim_lua" }, -- Neovim Lua API
+              { name = "treesitter" }, -- Treesitter 语法分析器
+              { name = "copilot" }, -- GitHub Copilot
+              { name = "emoji" },
+            }),
 
-		-- 增加当前窗格的高度
-		{ key = "DownArrow", mods = "ALT|SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 5 } }) },
-
-		-- 减少当前窗格的高度
-		{ key = "UpArrow", mods = "ALT|SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 5 } }) },
-	},
+            window = {
+              -- 完成建议菜单的外观设置
+              completion = {
+                border = "single", -- 边框样式，可选项有 'single', 'double', 'rounded', 'solid' 等
+                winhighlight = "Normal:Pmenu,CursorLine:MyPmenuSel,Search:None",
+              },
+              -- 文档预览窗口的外观设置
+              documentation = {
+                border = "rounded",
+              },
+            },
+          }),
+          ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_next_item()
+            -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
+            -- this way you will only jump inside the snippet region
+            elseif luasnip.expand_or_jumpable() then
+              luasnip.expand_or_jump()
+            elseif has_words_before() then
+              cmp.complete()
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+              luasnip.jump(-1)
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+        })
+      end,
+    },
+    ---@param opts cmp.ConfigSchema
+  },
 }
