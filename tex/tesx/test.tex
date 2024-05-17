@@ -43,8 +43,7 @@
   \Huge\textbf{前言}
 \end{center}
 
-这是数学系线性代数的笔记，写给自己。如有错误请见谅，这些只是作为分享。
-
+数据分析中方差分析的实验报告
 \begin{flushright}
   \begin{tabular}{c}
     ManJack \\
@@ -61,10 +60,46 @@
 \chapter{Linear Equations}
 
 % Start your content here
-在单因素r个水平试验中，设因素A的r个水平为$A_1,A_2,\cdots,A_r$,A的第i个水平重复$n_i$次，记$N=n_1+n_2+\cdots+n_r$，$x_{ij}$表示第i个水平的第j次试验的结果，$i=1,2,\cdots,r;j=1,2,\cdots,n_i$，则称随机变量$x_{ij}$服从r个水平的因素A的单因素试验模型，记为$A_{r}(n_1,n_2,\cdots,n_r)$，其数学模型为 $x_{ij}=\mu_i+\varepsilon_{ij}$，其中$\mu_i$为第i个水平的总体均值，$\varepsilon_{ij}$为第i个水平的第j次试验的随机误差，假定$\varepsilon_{ij}$相互独立，且服从均值为0，方差为$\sigma^2$的正态分布，即$\varepsilon_{ij}\sim N(0,\sigma^2)$，$i=1,2,\cdots,r;j=1,2,\cdots,n_i$。
+对于总体$X_i$的样本$X_{ij} \quad i = 1,2,\cdots,k;j = 1,2,\cdots,n_i$，有\[
+\overline{X} = \frac{1}{n}\sum_{i=1}^k\sum_{j=1}^{n_i}X_{ij}, \quad \overline{x}_i = \frac{1}{n_i}\sum_{j=1}^{n_i}X_{ij}, \quad \overline{\overline{X}} = \frac{1}{k}\sum_{i=1}^k\overline{x}_i\]
+\[
+ S_t = \sum_{i=1}^k\sum_{j=1}^{n_i}(X_{ij} - \overline{X})^2,S_e = \sum_{i=1}^k\sum_{j=1}^{n_i}(X_{ij} - \overline{x}_i)^2,S_A = \sum_{i=1}^k n_i(\overline{x}_i - \overline{\overline{X}})^2
+\]
 
-$n = s$
+在平方和的基础上，可以得到平方和的期望\[
+  E(S_e) = (n-k)\sigma^2, \quad E(S_A) = (k-1)\sigma^2, \quad E(S_t) = n\sigma^2
+\]
+\[
+  S_A = \sum_{i=1}^k\frac{(\overline{x}_i - \overline{\overline{X}})^2}{\sigma^2}, \quad S_e = \sum_{i=1}^k\sum_{j=1}^{n_i}\frac{(X_{ij} - \overline{x}_i)^2}{\sigma^2}
+.\]
+于是\[
+  ES_A = \sum\limits_{i=1}^{r}n_iE(\overline{X}_i^2) - nE(\overline{\overline{X}}^2) = \sum\limits_{i=1}^{r}(\frac{\sigma}{n_i}+\mu^2)n_i - n(\frac{\sigma}{n}+\mu^2) = \sigma^2\sum\limits_{i=1}^{r}\frac{n_i}{n} = (r-1)\sigma^2 +\sum\limits_{i=1}^{r}n_i\alpha^2
+.\]
 
+于是可得
+\[
+  E(\frac{S_e}{n-r})= \sigma^2, \quad E(\frac{S_A}{r-1}) = \sigma^2 + \frac{1}{r-1}\sum\limits_{i=1}^{r}n_i\alpha^2
+\]
 
+因此不论，$H_0$是否成立，都有\[
+  E(\frac{S_e}{n-r}) = E(\frac{S_A}{r-1}) = \sigma^2
+\]都是$\sigma^2$的无偏估计量，因此\[
+  \frac{S_e}{\sigma^2} \sim \chi^2(n-r), \quad \frac{S_A}{\sigma^2} \sim \chi^2(r-1)
+\]
+因此我们可以给定判断显著性水平
+当F统计量$F_0 = \frac{S_A/(r-1)}{S_e/(n-r)}$的值大于$F_{\alpha}(r-1,n-r)$时，拒绝$H_0$，否则不拒绝$H_0$.其中$F_{\alpha}(r-1,n-r)$是F分布的上$\alpha$分位数.
+当计算F时我们还可以利用以下公式来简化计算
+若令
+\[
+R = \sum\limits_{i=1}^{r}\sum\limits_{j=1}^{n_i}(X_ij)^2,K = \sum\limits_{i=1}^{r}\sum\limits_{j=1}^{n_i}X_{ij},Q = \sum\limits_{i=1}^{r}n_i\overline{X}_i^2
+.\]
 
+则有\[
+  S_t = R - \frac{K^2}{n}, \quad S_A = \frac{K^2}{n} - Q, \quad S_e = R - Q
+\]
+参数估计
+1.总体均值$\mu$的点估计
+\[
+ \vec{\mu} = \overline{X}_i, \quad \vec{\mu}_i = \overbar{x}_i,i = 1,2,\cdots,r,\quad \vec{\sigma}^2 = \frac{S_e}{n-r}
+\]
 \end{document}
